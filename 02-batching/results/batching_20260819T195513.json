@@ -1,0 +1,2728 @@
+{
+  "max_new_tokens": 60,
+  "batch_size": 8,
+  "table": [
+    {
+      "approach": "No batching",
+      "total_time_s": 93.52146740000171,
+      "throughput_tok_s": 4.8758858546309725,
+      "avg_cpu_percent": 60.657608695652144,
+      "short_latency_s": 54.09882676667257,
+      "long_latency_s": 47.181158800005505
+    },
+    {
+      "approach": "Static batching",
+      "total_time_s": 104.05443380000361,
+      "throughput_tok_s": 4.382321669026123,
+      "avg_cpu_percent": 65.053431372549,
+      "short_latency_s": 78.24168245001056,
+      "long_latency_s": 78.24168245001056
+    },
+    {
+      "approach": "Continuous (toy)",
+      "total_time_s": 61.556400700006634,
+      "throughput_tok_s": 7.407840530220456,
+      "avg_cpu_percent": 63.84380165289258,
+      "short_latency_s": 34.97604980000688,
+      "long_latency_s": 59.46409957500509
+    },
+    {
+      "approach": "vLLM",
+      "total_time_s": null,
+      "throughput_tok_s": null,
+      "avg_cpu_percent": null,
+      "short_latency_s": null,
+      "long_latency_s": null
+    }
+  ],
+  "raw": {
+    "no_batching": {
+      "approach": "no_batching",
+      "total_time_s": 93.52146740000171,
+      "throughput_tok_s": 4.8758858546309725,
+      "avg_cpu_percent": 60.657608695652144,
+      "cpu_samples": [
+        {
+          "t": 0.5141075999999885,
+          "cpu_percent": 62.7
+        },
+        {
+          "t": 1.0247949000040535,
+          "cpu_percent": 70.4
+        },
+        {
+          "t": 1.52592509999522,
+          "cpu_percent": 63.9
+        },
+        {
+          "t": 2.041580300006899,
+          "cpu_percent": 69.1
+        },
+        {
+          "t": 2.5481542000052286,
+          "cpu_percent": 69.0
+        },
+        {
+          "t": 3.0570747000019765,
+          "cpu_percent": 54.0
+        },
+        {
+          "t": 3.570321100007277,
+          "cpu_percent": 52.1
+        },
+        {
+          "t": 4.082151399998111,
+          "cpu_percent": 52.6
+        },
+        {
+          "t": 4.595913900004234,
+          "cpu_percent": 62.4
+        },
+        {
+          "t": 5.100488299998688,
+          "cpu_percent": 62.4
+        },
+        {
+          "t": 5.602788699994562,
+          "cpu_percent": 53.8
+        },
+        {
+          "t": 6.109947100005229,
+          "cpu_percent": 54.9
+        },
+        {
+          "t": 6.623653200003901,
+          "cpu_percent": 54.8
+        },
+        {
+          "t": 7.128186200003256,
+          "cpu_percent": 66.2
+        },
+        {
+          "t": 7.633409300004132,
+          "cpu_percent": 53.0
+        },
+        {
+          "t": 8.135028600008809,
+          "cpu_percent": 56.4
+        },
+        {
+          "t": 8.636867000008351,
+          "cpu_percent": 56.6
+        },
+        {
+          "t": 9.14917659999628,
+          "cpu_percent": 60.6
+        },
+        {
+          "t": 9.660749800008489,
+          "cpu_percent": 55.9
+        },
+        {
+          "t": 10.174717200003215,
+          "cpu_percent": 52.6
+        },
+        {
+          "t": 10.681770800001686,
+          "cpu_percent": 59.0
+        },
+        {
+          "t": 11.195557300001383,
+          "cpu_percent": 58.2
+        },
+        {
+          "t": 11.708127799996873,
+          "cpu_percent": 71.8
+        },
+        {
+          "t": 12.225719299996854,
+          "cpu_percent": 61.9
+        },
+        {
+          "t": 12.734600900002988,
+          "cpu_percent": 56.7
+        },
+        {
+          "t": 13.240582500002347,
+          "cpu_percent": 60.4
+        },
+        {
+          "t": 13.746072499998263,
+          "cpu_percent": 61.0
+        },
+        {
+          "t": 14.259161099995254,
+          "cpu_percent": 61.5
+        },
+        {
+          "t": 14.772970999998506,
+          "cpu_percent": 55.4
+        },
+        {
+          "t": 15.278335099996184,
+          "cpu_percent": 54.5
+        },
+        {
+          "t": 15.779343100002734,
+          "cpu_percent": 54.1
+        },
+        {
+          "t": 16.29132550000213,
+          "cpu_percent": 67.8
+        },
+        {
+          "t": 16.793195899997954,
+          "cpu_percent": 56.7
+        },
+        {
+          "t": 17.298082799999975,
+          "cpu_percent": 54.5
+        },
+        {
+          "t": 17.808018099996843,
+          "cpu_percent": 56.3
+        },
+        {
+          "t": 18.311118500001612,
+          "cpu_percent": 59.6
+        },
+        {
+          "t": 18.82191139999486,
+          "cpu_percent": 62.1
+        },
+        {
+          "t": 19.32586569999694,
+          "cpu_percent": 55.7
+        },
+        {
+          "t": 19.84177549999731,
+          "cpu_percent": 67.7
+        },
+        {
+          "t": 20.347562299997662,
+          "cpu_percent": 66.8
+        },
+        {
+          "t": 20.862734099995578,
+          "cpu_percent": 76.2
+        },
+        {
+          "t": 21.363945999997668,
+          "cpu_percent": 54.2
+        },
+        {
+          "t": 21.86980980000226,
+          "cpu_percent": 55.5
+        },
+        {
+          "t": 22.370577399997273,
+          "cpu_percent": 53.2
+        },
+        {
+          "t": 22.88280580000719,
+          "cpu_percent": 64.7
+        },
+        {
+          "t": 23.395095500003663,
+          "cpu_percent": 64.0
+        },
+        {
+          "t": 23.91163279999455,
+          "cpu_percent": 56.9
+        },
+        {
+          "t": 24.425908400007756,
+          "cpu_percent": 54.5
+        },
+        {
+          "t": 24.927237099997,
+          "cpu_percent": 54.0
+        },
+        {
+          "t": 25.430097899996326,
+          "cpu_percent": 68.5
+        },
+        {
+          "t": 25.93102550000185,
+          "cpu_percent": 53.4
+        },
+        {
+          "t": 26.4331022999977,
+          "cpu_percent": 55.4
+        },
+        {
+          "t": 26.946710100004566,
+          "cpu_percent": 54.3
+        },
+        {
+          "t": 27.460744500000146,
+          "cpu_percent": 59.9
+        },
+        {
+          "t": 27.971656900001108,
+          "cpu_percent": 62.1
+        },
+        {
+          "t": 28.472354300000006,
+          "cpu_percent": 53.2
+        },
+        {
+          "t": 28.985849799995776,
+          "cpu_percent": 53.8
+        },
+        {
+          "t": 29.497936600004323,
+          "cpu_percent": 75.8
+        },
+        {
+          "t": 30.00694239999575,
+          "cpu_percent": 80.0
+        },
+        {
+          "t": 30.519075200005318,
+          "cpu_percent": 67.3
+        },
+        {
+          "t": 31.034657099997276,
+          "cpu_percent": 51.9
+        },
+        {
+          "t": 31.54952110000886,
+          "cpu_percent": 59.7
+        },
+        {
+          "t": 32.05650229999446,
+          "cpu_percent": 54.9
+        },
+        {
+          "t": 32.5625022000022,
+          "cpu_percent": 68.7
+        },
+        {
+          "t": 33.07099880000169,
+          "cpu_percent": 56.2
+        },
+        {
+          "t": 33.58711229999608,
+          "cpu_percent": 62.1
+        },
+        {
+          "t": 34.10215740000422,
+          "cpu_percent": 59.2
+        },
+        {
+          "t": 34.61361300000863,
+          "cpu_percent": 70.5
+        },
+        {
+          "t": 35.128698300002725,
+          "cpu_percent": 55.5
+        },
+        {
+          "t": 35.637596000000485,
+          "cpu_percent": 62.0
+        },
+        {
+          "t": 36.1434142000071,
+          "cpu_percent": 57.4
+        },
+        {
+          "t": 36.65304620000825,
+          "cpu_percent": 54.5
+        },
+        {
+          "t": 37.158243600002606,
+          "cpu_percent": 70.7
+        },
+        {
+          "t": 37.674669100000756,
+          "cpu_percent": 58.8
+        },
+        {
+          "t": 38.18451000000641,
+          "cpu_percent": 64.8
+        },
+        {
+          "t": 38.691894300005515,
+          "cpu_percent": 55.5
+        },
+        {
+          "t": 39.20636219999869,
+          "cpu_percent": 65.8
+        },
+        {
+          "t": 39.708099099996616,
+          "cpu_percent": 57.1
+        },
+        {
+          "t": 40.209507299994584,
+          "cpu_percent": 53.4
+        },
+        {
+          "t": 40.711600499998895,
+          "cpu_percent": 56.7
+        },
+        {
+          "t": 41.215820299999905,
+          "cpu_percent": 66.2
+        },
+        {
+          "t": 41.72976760000165,
+          "cpu_percent": 80.9
+        },
+        {
+          "t": 42.232910699996864,
+          "cpu_percent": 61.2
+        },
+        {
+          "t": 42.73623100000259,
+          "cpu_percent": 57.4
+        },
+        {
+          "t": 43.25198200000159,
+          "cpu_percent": 58.2
+        },
+        {
+          "t": 43.77416369999992,
+          "cpu_percent": 68.4
+        },
+        {
+          "t": 44.2800000999996,
+          "cpu_percent": 67.0
+        },
+        {
+          "t": 44.791118399996776,
+          "cpu_percent": 55.8
+        },
+        {
+          "t": 45.30028379999567,
+          "cpu_percent": 56.9
+        },
+        {
+          "t": 45.81385420000879,
+          "cpu_percent": 53.3
+        },
+        {
+          "t": 46.32367070000328,
+          "cpu_percent": 73.0
+        },
+        {
+          "t": 46.824600000007194,
+          "cpu_percent": 55.0
+        },
+        {
+          "t": 47.340147399998386,
+          "cpu_percent": 53.8
+        },
+        {
+          "t": 47.85078570000769,
+          "cpu_percent": 61.0
+        },
+        {
+          "t": 48.36520200000086,
+          "cpu_percent": 67.8
+        },
+        {
+          "t": 48.87675060000038,
+          "cpu_percent": 58.7
+        },
+        {
+          "t": 49.39057899999898,
+          "cpu_percent": 67.5
+        },
+        {
+          "t": 49.89185300000827,
+          "cpu_percent": 62.5
+        },
+        {
+          "t": 50.39328669999668,
+          "cpu_percent": 58.0
+        },
+        {
+          "t": 50.90577949999715,
+          "cpu_percent": 70.3
+        },
+        {
+          "t": 51.40709130000323,
+          "cpu_percent": 66.1
+        },
+        {
+          "t": 51.921141600003466,
+          "cpu_percent": 57.8
+        },
+        {
+          "t": 52.42231449999963,
+          "cpu_percent": 57.1
+        },
+        {
+          "t": 52.93410490000679,
+          "cpu_percent": 66.8
+        },
+        {
+          "t": 53.44748650000838,
+          "cpu_percent": 65.1
+        },
+        {
+          "t": 53.94918310000503,
+          "cpu_percent": 57.8
+        },
+        {
+          "t": 54.4514446999965,
+          "cpu_percent": 55.3
+        },
+        {
+          "t": 54.967503699997906,
+          "cpu_percent": 57.4
+        },
+        {
+          "t": 55.47808929999883,
+          "cpu_percent": 72.6
+        },
+        {
+          "t": 55.990970800005016,
+          "cpu_percent": 57.3
+        },
+        {
+          "t": 56.50499509999645,
+          "cpu_percent": 55.5
+        },
+        {
+          "t": 57.0199403000006,
+          "cpu_percent": 54.9
+        },
+        {
+          "t": 57.534975899994606,
+          "cpu_percent": 60.7
+        },
+        {
+          "t": 58.035722900007386,
+          "cpu_percent": 64.9
+        },
+        {
+          "t": 58.55002870000317,
+          "cpu_percent": 54.6
+        },
+        {
+          "t": 59.053193600004306,
+          "cpu_percent": 53.9
+        },
+        {
+          "t": 59.565736400007154,
+          "cpu_percent": 62.7
+        },
+        {
+          "t": 60.07597269999678,
+          "cpu_percent": 70.3
+        },
+        {
+          "t": 60.57745870000508,
+          "cpu_percent": 54.5
+        },
+        {
+          "t": 61.07848769999691,
+          "cpu_percent": 65.6
+        },
+        {
+          "t": 61.57909840000502,
+          "cpu_percent": 67.2
+        },
+        {
+          "t": 62.09281919999921,
+          "cpu_percent": 68.9
+        },
+        {
+          "t": 62.60521819999849,
+          "cpu_percent": 64.3
+        },
+        {
+          "t": 63.12058899999829,
+          "cpu_percent": 55.9
+        },
+        {
+          "t": 63.63542819999566,
+          "cpu_percent": 54.5
+        },
+        {
+          "t": 64.1372529000073,
+          "cpu_percent": 53.9
+        },
+        {
+          "t": 64.6456782000023,
+          "cpu_percent": 66.2
+        },
+        {
+          "t": 65.15828930000134,
+          "cpu_percent": 53.0
+        },
+        {
+          "t": 65.67279409999901,
+          "cpu_percent": 60.7
+        },
+        {
+          "t": 66.18766060000053,
+          "cpu_percent": 75.3
+        },
+        {
+          "t": 66.70318219999899,
+          "cpu_percent": 75.9
+        },
+        {
+          "t": 67.20849129999988,
+          "cpu_percent": 83.3
+        },
+        {
+          "t": 67.72183979999681,
+          "cpu_percent": 61.9
+        },
+        {
+          "t": 68.23763089999557,
+          "cpu_percent": 57.9
+        },
+        {
+          "t": 68.75000640000508,
+          "cpu_percent": 58.9
+        },
+        {
+          "t": 69.26106030000665,
+          "cpu_percent": 65.8
+        },
+        {
+          "t": 69.77543710000464,
+          "cpu_percent": 61.0
+        },
+        {
+          "t": 70.28977740000119,
+          "cpu_percent": 53.4
+        },
+        {
+          "t": 70.79142190000857,
+          "cpu_percent": 54.1
+        },
+        {
+          "t": 71.3059365000081,
+          "cpu_percent": 55.3
+        },
+        {
+          "t": 71.81574350000301,
+          "cpu_percent": 69.8
+        },
+        {
+          "t": 72.33036580000771,
+          "cpu_percent": 54.8
+        },
+        {
+          "t": 72.8312833999953,
+          "cpu_percent": 57.1
+        },
+        {
+          "t": 73.33351300000504,
+          "cpu_percent": 56.4
+        },
+        {
+          "t": 73.84679460000189,
+          "cpu_percent": 63.5
+        },
+        {
+          "t": 74.36002340000414,
+          "cpu_percent": 74.8
+        },
+        {
+          "t": 74.87398089999624,
+          "cpu_percent": 61.2
+        },
+        {
+          "t": 75.38794970000163,
+          "cpu_percent": 55.1
+        },
+        {
+          "t": 75.89163990000088,
+          "cpu_percent": 55.8
+        },
+        {
+          "t": 76.40272250000271,
+          "cpu_percent": 74.0
+        },
+        {
+          "t": 76.917320499997,
+          "cpu_percent": 57.1
+        },
+        {
+          "t": 77.42918690000079,
+          "cpu_percent": 54.7
+        },
+        {
+          "t": 77.94149019999895,
+          "cpu_percent": 54.3
+        },
+        {
+          "t": 78.44313400000101,
+          "cpu_percent": 61.6
+        },
+        {
+          "t": 78.95232440000109,
+          "cpu_percent": 65.6
+        },
+        {
+          "t": 79.4542092000047,
+          "cpu_percent": 63.6
+        },
+        {
+          "t": 79.96901020000223,
+          "cpu_percent": 71.5
+        },
+        {
+          "t": 80.48478690000775,
+          "cpu_percent": 56.0
+        },
+        {
+          "t": 80.9972037999978,
+          "cpu_percent": 69.5
+        },
+        {
+          "t": 81.50109210000664,
+          "cpu_percent": 60.1
+        },
+        {
+          "t": 82.01433160000306,
+          "cpu_percent": 63.3
+        },
+        {
+          "t": 82.53117919999931,
+          "cpu_percent": 53.8
+        },
+        {
+          "t": 83.04750870000862,
+          "cpu_percent": 66.2
+        },
+        {
+          "t": 83.55685320000339,
+          "cpu_percent": 63.2
+        },
+        {
+          "t": 84.06875690000015,
+          "cpu_percent": 54.6
+        },
+        {
+          "t": 84.58366699999897,
+          "cpu_percent": 56.9
+        },
+        {
+          "t": 85.09808670000348,
+          "cpu_percent": 68.8
+        },
+        {
+          "t": 85.60899849999987,
+          "cpu_percent": 69.1
+        },
+        {
+          "t": 86.12409399999888,
+          "cpu_percent": 56.4
+        },
+        {
+          "t": 86.63897050000378,
+          "cpu_percent": 54.8
+        },
+        {
+          "t": 87.1396900999971,
+          "cpu_percent": 56.2
+        },
+        {
+          "t": 87.65392140000768,
+          "cpu_percent": 56.9
+        },
+        {
+          "t": 88.16721440000401,
+          "cpu_percent": 64.1
+        },
+        {
+          "t": 88.68135410000104,
+          "cpu_percent": 53.7
+        },
+        {
+          "t": 89.18205800000578,
+          "cpu_percent": 54.5
+        },
+        {
+          "t": 89.69739169999957,
+          "cpu_percent": 57.5
+        },
+        {
+          "t": 90.21241989999544,
+          "cpu_percent": 70.0
+        },
+        {
+          "t": 90.72650820000854,
+          "cpu_percent": 57.0
+        },
+        {
+          "t": 91.22896409999521,
+          "cpu_percent": 54.0
+        },
+        {
+          "t": 91.730006400001,
+          "cpu_percent": 55.4
+        },
+        {
+          "t": 92.23279979999643,
+          "cpu_percent": 55.8
+        },
+        {
+          "t": 92.74153189999925,
+          "cpu_percent": 65.2
+        },
+        {
+          "t": 93.25638069999695,
+          "cpu_percent": 55.6
+        },
+        {
+          "t": 93.52350409999781,
+          "cpu_percent": 52.9
+        }
+      ],
+      "results": [
+        {
+          "request_id": 0,
+          "category": "long",
+          "prompt_tokens": 182,
+          "output_tokens": 60,
+          "latency_s": 12.200604400000884,
+          "own_compute_s": 12.1658199000085,
+          "text": "Photosynthesis is the process by which plants, algae, and some bacteria convert light energy into chemical energy stored in glucose. This process is crucial for almost all life on Earth, as it provides the energy necessary for almost all cellular activities, including the growth and reproduction of organisms. The process can be divided"
+        },
+        {
+          "request_id": 1,
+          "category": "short",
+          "prompt_tokens": 42,
+          "output_tokens": 8,
+          "latency_s": 14.177750700007891,
+          "own_compute_s": 1.9750657999975374,
+          "text": "The capital of France is Paris."
+        },
+        {
+          "request_id": 2,
+          "category": "short",
+          "prompt_tokens": 41,
+          "output_tokens": 28,
+          "latency_s": 19.58556750000571,
+          "own_compute_s": 5.40652720000071,
+          "text": "Yes, the sun is a star, as it is a massive, luminous object that emits light and heat through nuclear fusion reactions."
+        },
+        {
+          "request_id": 3,
+          "category": "short",
+          "prompt_tokens": 43,
+          "output_tokens": 18,
+          "latency_s": 23.39837439999974,
+          "own_compute_s": 3.8115379999944707,
+          "text": "When you mix blue and yellow, you get a bright, vibrant shade of orange."
+        },
+        {
+          "request_id": 4,
+          "category": "long",
+          "prompt_tokens": 168,
+          "output_tokens": 60,
+          "latency_s": 35.46914600000309,
+          "own_compute_s": 12.067827699996997,
+          "text": "The water cycle, also known as the hydrological cycle, is a continuous process that involves the movement of water on, above, and below the surface of the Earth. It is a crucial part of the Earth's climate system and plays a vital role in regulating the Earth's temperature and the availability of"
+        },
+        {
+          "request_id": 5,
+          "category": "short",
+          "prompt_tokens": 42,
+          "output_tokens": 8,
+          "latency_s": 37.45159000001149,
+          "own_compute_s": 1.981168099999195,
+          "text": "The capital of France is Paris."
+        },
+        {
+          "request_id": 6,
+          "category": "short",
+          "prompt_tokens": 41,
+          "output_tokens": 28,
+          "latency_s": 43.01304420000815,
+          "own_compute_s": 5.560212199998205,
+          "text": "Yes, the sun is a star, as it is a massive, luminous object that emits light and heat through nuclear fusion reactions."
+        },
+        {
+          "request_id": 7,
+          "category": "short",
+          "prompt_tokens": 43,
+          "output_tokens": 18,
+          "latency_s": 46.77420179999899,
+          "own_compute_s": 3.7599911999859614,
+          "text": "When you mix blue and yellow, you get a bright, vibrant shade of orange."
+        },
+        {
+          "request_id": 8,
+          "category": "long",
+          "prompt_tokens": 170,
+          "output_tokens": 60,
+          "latency_s": 58.76541980000911,
+          "own_compute_s": 11.987794799992116,
+          "text": "### Understanding Vaccines: How They Train the Immune System\n\nVaccines are designed to stimulate the immune system to recognize and fight off specific pathogens. The process begins with the introduction of a harmless or attenuated pathogen into the body, which triggers an immune response. This response is crucial because"
+        },
+        {
+          "request_id": 9,
+          "category": "short",
+          "prompt_tokens": 42,
+          "output_tokens": 8,
+          "latency_s": 60.78360999999859,
+          "own_compute_s": 2.016964199996437,
+          "text": "The capital of France is Paris."
+        },
+        {
+          "request_id": 10,
+          "category": "short",
+          "prompt_tokens": 41,
+          "output_tokens": 28,
+          "latency_s": 66.25803160000942,
+          "own_compute_s": 5.4731922000064515,
+          "text": "Yes, the sun is a star, as it is a massive, luminous object that emits light and heat through nuclear fusion reactions."
+        },
+        {
+          "request_id": 11,
+          "category": "short",
+          "prompt_tokens": 43,
+          "output_tokens": 18,
+          "latency_s": 70.14434720001009,
+          "own_compute_s": 3.885028600008809,
+          "text": "When you mix blue and yellow, you get a bright, vibrant shade of orange."
+        },
+        {
+          "request_id": 12,
+          "category": "long",
+          "prompt_tokens": 182,
+          "output_tokens": 60,
+          "latency_s": 82.28946500000893,
+          "own_compute_s": 12.14238399999158,
+          "text": "Photosynthesis is the process by which plants, algae, and some bacteria convert light energy into chemical energy stored in glucose. This process is crucial for almost all life on Earth, as it provides the energy necessary for almost all cellular activities, including the growth and reproduction of organisms. The process can be divided"
+        },
+        {
+          "request_id": 13,
+          "category": "short",
+          "prompt_tokens": 42,
+          "output_tokens": 8,
+          "latency_s": 84.30107729999872,
+          "own_compute_s": 2.010260200011544,
+          "text": "The capital of France is Paris."
+        },
+        {
+          "request_id": 14,
+          "category": "short",
+          "prompt_tokens": 41,
+          "output_tokens": 28,
+          "latency_s": 89.77694580001116,
+          "own_compute_s": 5.474742099992,
+          "text": "Yes, the sun is a star, as it is a massive, luminous object that emits light and heat through nuclear fusion reactions."
+        },
+        {
+          "request_id": 15,
+          "category": "short",
+          "prompt_tokens": 43,
+          "output_tokens": 18,
+          "latency_s": 93.52138070001092,
+          "own_compute_s": 3.7431856999901356,
+          "text": "When you mix blue and yellow, you get a bright, vibrant shade of orange."
+        }
+      ]
+    },
+    "static_batching": {
+      "approach": "static_batching",
+      "batch_size": 8,
+      "total_time_s": 104.05443380000361,
+      "throughput_tok_s": 4.382321669026123,
+      "avg_cpu_percent": 65.053431372549,
+      "cpu_samples": [
+        {
+          "t": 0.5168432000064058,
+          "cpu_percent": 62.2
+        },
+        {
+          "t": 1.0297531000105664,
+          "cpu_percent": 64.2
+        },
+        {
+          "t": 1.5448307000042405,
+          "cpu_percent": 67.3
+        },
+        {
+          "t": 2.0573751000047196,
+          "cpu_percent": 72.5
+        },
+        {
+          "t": 2.5696048000099836,
+          "cpu_percent": 55.2
+        },
+        {
+          "t": 3.085339800003567,
+          "cpu_percent": 53.5
+        },
+        {
+          "t": 3.5998378000076627,
+          "cpu_percent": 53.8
+        },
+        {
+          "t": 4.115424200004782,
+          "cpu_percent": 57.0
+        },
+        {
+          "t": 4.625004500005161,
+          "cpu_percent": 66.5
+        },
+        {
+          "t": 5.139183500010404,
+          "cpu_percent": 61.4
+        },
+        {
+          "t": 5.6404940000065835,
+          "cpu_percent": 67.6
+        },
+        {
+          "t": 6.153226200010977,
+          "cpu_percent": 63.4
+        },
+        {
+          "t": 6.66253339999821,
+          "cpu_percent": 69.0
+        },
+        {
+          "t": 7.177130100011709,
+          "cpu_percent": 54.9
+        },
+        {
+          "t": 7.686807400008547,
+          "cpu_percent": 58.2
+        },
+        {
+          "t": 8.202313500005403,
+          "cpu_percent": 61.4
+        },
+        {
+          "t": 8.716143199999351,
+          "cpu_percent": 69.3
+        },
+        {
+          "t": 9.229382200006512,
+          "cpu_percent": 86.5
+        },
+        {
+          "t": 9.741915000005974,
+          "cpu_percent": 61.4
+        },
+        {
+          "t": 10.256596700011869,
+          "cpu_percent": 61.8
+        },
+        {
+          "t": 10.772609899999225,
+          "cpu_percent": 62.3
+        },
+        {
+          "t": 11.287177400008659,
+          "cpu_percent": 69.3
+        },
+        {
+          "t": 11.802439700011746,
+          "cpu_percent": 64.0
+        },
+        {
+          "t": 12.319035500011523,
+          "cpu_percent": 55.1
+        },
+        {
+          "t": 12.821638900000835,
+          "cpu_percent": 54.4
+        },
+        {
+          "t": 13.325311600012355,
+          "cpu_percent": 56.8
+        },
+        {
+          "t": 13.842482100008056,
+          "cpu_percent": 80.7
+        },
+        {
+          "t": 14.353437600002508,
+          "cpu_percent": 77.2
+        },
+        {
+          "t": 14.867921500001103,
+          "cpu_percent": 63.8
+        },
+        {
+          "t": 15.385220000011032,
+          "cpu_percent": 67.5
+        },
+        {
+          "t": 15.888190400000894,
+          "cpu_percent": 65.1
+        },
+        {
+          "t": 16.398779499999364,
+          "cpu_percent": 77.3
+        },
+        {
+          "t": 16.91395800000464,
+          "cpu_percent": 64.2
+        },
+        {
+          "t": 17.419520700001158,
+          "cpu_percent": 60.2
+        },
+        {
+          "t": 17.922768500007805,
+          "cpu_percent": 67.0
+        },
+        {
+          "t": 18.440718600002583,
+          "cpu_percent": 56.6
+        },
+        {
+          "t": 18.95583350000379,
+          "cpu_percent": 78.5
+        },
+        {
+          "t": 19.45972769999935,
+          "cpu_percent": 58.8
+        },
+        {
+          "t": 19.969071100000292,
+          "cpu_percent": 57.1
+        },
+        {
+          "t": 20.473499900006573,
+          "cpu_percent": 62.4
+        },
+        {
+          "t": 20.98952210000425,
+          "cpu_percent": 56.5
+        },
+        {
+          "t": 21.497886500001187,
+          "cpu_percent": 80.4
+        },
+        {
+          "t": 22.00948330000392,
+          "cpu_percent": 65.5
+        },
+        {
+          "t": 22.524126900010742,
+          "cpu_percent": 60.4
+        },
+        {
+          "t": 23.030706800011103,
+          "cpu_percent": 64.2
+        },
+        {
+          "t": 23.537412100005895,
+          "cpu_percent": 62.2
+        },
+        {
+          "t": 24.04409619999933,
+          "cpu_percent": 78.5
+        },
+        {
+          "t": 24.549838700011605,
+          "cpu_percent": 64.0
+        },
+        {
+          "t": 25.065589900012128,
+          "cpu_percent": 56.4
+        },
+        {
+          "t": 25.56921560000046,
+          "cpu_percent": 58.5
+        },
+        {
+          "t": 26.082366700007697,
+          "cpu_percent": 65.0
+        },
+        {
+          "t": 26.59910740000487,
+          "cpu_percent": 72.2
+        },
+        {
+          "t": 27.113626200007275,
+          "cpu_percent": 59.8
+        },
+        {
+          "t": 27.61987740000768,
+          "cpu_percent": 58.1
+        },
+        {
+          "t": 28.13306069999817,
+          "cpu_percent": 61.7
+        },
+        {
+          "t": 28.649691300000995,
+          "cpu_percent": 72.2
+        },
+        {
+          "t": 29.163967300002696,
+          "cpu_percent": 69.2
+        },
+        {
+          "t": 29.680913200005307,
+          "cpu_percent": 59.0
+        },
+        {
+          "t": 30.18385010000202,
+          "cpu_percent": 56.4
+        },
+        {
+          "t": 30.69019940000726,
+          "cpu_percent": 60.7
+        },
+        {
+          "t": 31.204126100012218,
+          "cpu_percent": 65.4
+        },
+        {
+          "t": 31.717594200003077,
+          "cpu_percent": 82.9
+        },
+        {
+          "t": 32.22004910001124,
+          "cpu_percent": 62.2
+        },
+        {
+          "t": 32.73067230000743,
+          "cpu_percent": 56.7
+        },
+        {
+          "t": 33.24407460000657,
+          "cpu_percent": 56.1
+        },
+        {
+          "t": 33.7471879000077,
+          "cpu_percent": 76.8
+        },
+        {
+          "t": 34.2505247000081,
+          "cpu_percent": 71.3
+        },
+        {
+          "t": 34.76748480000242,
+          "cpu_percent": 68.2
+        },
+        {
+          "t": 35.282931400011876,
+          "cpu_percent": 59.1
+        },
+        {
+          "t": 35.79889820000972,
+          "cpu_percent": 58.8
+        },
+        {
+          "t": 36.31019689999812,
+          "cpu_percent": 78.4
+        },
+        {
+          "t": 36.82249299999967,
+          "cpu_percent": 63.8
+        },
+        {
+          "t": 37.33859550001216,
+          "cpu_percent": 61.1
+        },
+        {
+          "t": 37.85364960000152,
+          "cpu_percent": 59.2
+        },
+        {
+          "t": 38.36871800001245,
+          "cpu_percent": 58.3
+        },
+        {
+          "t": 38.87959750001028,
+          "cpu_percent": 75.5
+        },
+        {
+          "t": 39.392598400008865,
+          "cpu_percent": 57.8
+        },
+        {
+          "t": 39.90849490000983,
+          "cpu_percent": 57.4
+        },
+        {
+          "t": 40.421347600000445,
+          "cpu_percent": 68.4
+        },
+        {
+          "t": 40.93727629999921,
+          "cpu_percent": 73.3
+        },
+        {
+          "t": 41.4503085000033,
+          "cpu_percent": 88.8
+        },
+        {
+          "t": 41.96286169999803,
+          "cpu_percent": 62.8
+        },
+        {
+          "t": 42.46615400000883,
+          "cpu_percent": 60.5
+        },
+        {
+          "t": 42.967156099999556,
+          "cpu_percent": 72.2
+        },
+        {
+          "t": 43.47982110000157,
+          "cpu_percent": 60.4
+        },
+        {
+          "t": 43.987260100009735,
+          "cpu_percent": 69.8
+        },
+        {
+          "t": 44.50276080000913,
+          "cpu_percent": 60.4
+        },
+        {
+          "t": 45.016972199999145,
+          "cpu_percent": 55.9
+        },
+        {
+          "t": 45.531890800004476,
+          "cpu_percent": 66.4
+        },
+        {
+          "t": 46.04450680001173,
+          "cpu_percent": 74.7
+        },
+        {
+          "t": 46.55845019999833,
+          "cpu_percent": 70.2
+        },
+        {
+          "t": 47.0724893000006,
+          "cpu_percent": 61.8
+        },
+        {
+          "t": 47.57475369999884,
+          "cpu_percent": 59.5
+        },
+        {
+          "t": 48.08010630001081,
+          "cpu_percent": 60.8
+        },
+        {
+          "t": 48.59097790000669,
+          "cpu_percent": 78.6
+        },
+        {
+          "t": 49.10451499999908,
+          "cpu_percent": 70.6
+        },
+        {
+          "t": 49.619616800002404,
+          "cpu_percent": 57.2
+        },
+        {
+          "t": 50.12458570000308,
+          "cpu_percent": 58.4
+        },
+        {
+          "t": 50.63844629999949,
+          "cpu_percent": 63.7
+        },
+        {
+          "t": 51.15345789999992,
+          "cpu_percent": 76.3
+        },
+        {
+          "t": 51.668941500000074,
+          "cpu_percent": 62.2
+        },
+        {
+          "t": 52.17972010000085,
+          "cpu_percent": 61.2
+        },
+        {
+          "t": 52.68348870000045,
+          "cpu_percent": 54.8
+        },
+        {
+          "t": 53.18619100000069,
+          "cpu_percent": 66.5
+        },
+        {
+          "t": 53.69707429999835,
+          "cpu_percent": 71.9
+        },
+        {
+          "t": 54.211702000000514,
+          "cpu_percent": 53.9
+        },
+        {
+          "t": 54.72385280000162,
+          "cpu_percent": 54.5
+        },
+        {
+          "t": 55.22565810001106,
+          "cpu_percent": 53.4
+        },
+        {
+          "t": 55.738758100007544,
+          "cpu_percent": 61.0
+        },
+        {
+          "t": 56.25091760000214,
+          "cpu_percent": 58.8
+        },
+        {
+          "t": 56.75478840000869,
+          "cpu_percent": 54.8
+        },
+        {
+          "t": 57.25865660001,
+          "cpu_percent": 57.6
+        },
+        {
+          "t": 57.774017500007176,
+          "cpu_percent": 56.9
+        },
+        {
+          "t": 58.28384370000276,
+          "cpu_percent": 65.0
+        },
+        {
+          "t": 58.78597660000378,
+          "cpu_percent": 53.6
+        },
+        {
+          "t": 59.29898000000685,
+          "cpu_percent": 56.5
+        },
+        {
+          "t": 59.81232850000379,
+          "cpu_percent": 58.5
+        },
+        {
+          "t": 60.323168000002624,
+          "cpu_percent": 67.5
+        },
+        {
+          "t": 60.82747490001202,
+          "cpu_percent": 65.9
+        },
+        {
+          "t": 61.34054020000622,
+          "cpu_percent": 70.7
+        },
+        {
+          "t": 61.84272830000555,
+          "cpu_percent": 69.0
+        },
+        {
+          "t": 62.358223500006716,
+          "cpu_percent": 89.8
+        },
+        {
+          "t": 62.86956450001162,
+          "cpu_percent": 76.9
+        },
+        {
+          "t": 63.3722359000094,
+          "cpu_percent": 57.0
+        },
+        {
+          "t": 63.87419339999906,
+          "cpu_percent": 67.3
+        },
+        {
+          "t": 64.388082999998,
+          "cpu_percent": 80.7
+        },
+        {
+          "t": 64.90377770000487,
+          "cpu_percent": 63.1
+        },
+        {
+          "t": 65.41388430001098,
+          "cpu_percent": 77.3
+        },
+        {
+          "t": 65.91722020000452,
+          "cpu_percent": 58.7
+        },
+        {
+          "t": 66.42000120000739,
+          "cpu_percent": 61.0
+        },
+        {
+          "t": 66.92220510001061,
+          "cpu_percent": 72.7
+        },
+        {
+          "t": 67.43373230000725,
+          "cpu_percent": 77.4
+        },
+        {
+          "t": 67.94111840000551,
+          "cpu_percent": 66.8
+        },
+        {
+          "t": 68.45802450001065,
+          "cpu_percent": 56.9
+        },
+        {
+          "t": 68.96154709999973,
+          "cpu_percent": 55.1
+        },
+        {
+          "t": 69.4750686000043,
+          "cpu_percent": 56.3
+        },
+        {
+          "t": 69.99259360000724,
+          "cpu_percent": 69.2
+        },
+        {
+          "t": 70.50259420000657,
+          "cpu_percent": 63.2
+        },
+        {
+          "t": 71.00532609999937,
+          "cpu_percent": 55.8
+        },
+        {
+          "t": 71.5198165000038,
+          "cpu_percent": 57.4
+        },
+        {
+          "t": 72.03353710001102,
+          "cpu_percent": 62.7
+        },
+        {
+          "t": 72.54700040000898,
+          "cpu_percent": 78.5
+        },
+        {
+          "t": 73.06039769999916,
+          "cpu_percent": 66.0
+        },
+        {
+          "t": 73.56351550000545,
+          "cpu_percent": 62.5
+        },
+        {
+          "t": 74.06792190000124,
+          "cpu_percent": 58.8
+        },
+        {
+          "t": 74.57113830000162,
+          "cpu_percent": 58.9
+        },
+        {
+          "t": 75.08198719999928,
+          "cpu_percent": 72.0
+        },
+        {
+          "t": 75.59000490000471,
+          "cpu_percent": 60.7
+        },
+        {
+          "t": 76.10228180000558,
+          "cpu_percent": 60.0
+        },
+        {
+          "t": 76.6086481000093,
+          "cpu_percent": 64.0
+        },
+        {
+          "t": 77.12460550000833,
+          "cpu_percent": 75.7
+        },
+        {
+          "t": 77.63655710000603,
+          "cpu_percent": 83.3
+        },
+        {
+          "t": 78.1537731999997,
+          "cpu_percent": 60.1
+        },
+        {
+          "t": 78.6697955999989,
+          "cpu_percent": 57.8
+        },
+        {
+          "t": 79.18373220000649,
+          "cpu_percent": 57.4
+        },
+        {
+          "t": 79.69705230000545,
+          "cpu_percent": 67.2
+        },
+        {
+          "t": 80.21088800000143,
+          "cpu_percent": 73.7
+        },
+        {
+          "t": 80.72686720000638,
+          "cpu_percent": 58.9
+        },
+        {
+          "t": 81.24183210000047,
+          "cpu_percent": 60.0
+        },
+        {
+          "t": 81.74498770000355,
+          "cpu_percent": 64.1
+        },
+        {
+          "t": 82.2535765000066,
+          "cpu_percent": 74.9
+        },
+        {
+          "t": 82.75961310000275,
+          "cpu_percent": 69.1
+        },
+        {
+          "t": 83.26348160000634,
+          "cpu_percent": 57.5
+        },
+        {
+          "t": 83.76546360000793,
+          "cpu_percent": 59.6
+        },
+        {
+          "t": 84.28051880000567,
+          "cpu_percent": 67.7
+        },
+        {
+          "t": 84.79650589999801,
+          "cpu_percent": 70.5
+        },
+        {
+          "t": 85.29914880001161,
+          "cpu_percent": 69.8
+        },
+        {
+          "t": 85.81098550000752,
+          "cpu_percent": 69.7
+        },
+        {
+          "t": 86.31310630000371,
+          "cpu_percent": 73.3
+        },
+        {
+          "t": 86.82782830001088,
+          "cpu_percent": 77.2
+        },
+        {
+          "t": 87.34530620000442,
+          "cpu_percent": 73.5
+        },
+        {
+          "t": 87.85895220001112,
+          "cpu_percent": 78.4
+        },
+        {
+          "t": 88.36271050000505,
+          "cpu_percent": 60.5
+        },
+        {
+          "t": 88.86629770000582,
+          "cpu_percent": 59.4
+        },
+        {
+          "t": 89.36909469999955,
+          "cpu_percent": 59.1
+        },
+        {
+          "t": 89.8822177000111,
+          "cpu_percent": 73.0
+        },
+        {
+          "t": 90.3896292999998,
+          "cpu_percent": 63.9
+        },
+        {
+          "t": 90.90511210000841,
+          "cpu_percent": 61.2
+        },
+        {
+          "t": 91.41916689999925,
+          "cpu_percent": 61.4
+        },
+        {
+          "t": 91.93396000000939,
+          "cpu_percent": 61.4
+        },
+        {
+          "t": 92.44557490000443,
+          "cpu_percent": 80.5
+        },
+        {
+          "t": 92.95120039999892,
+          "cpu_percent": 63.3
+        },
+        {
+          "t": 93.46847079999861,
+          "cpu_percent": 59.4
+        },
+        {
+          "t": 93.98566970000684,
+          "cpu_percent": 71.2
+        },
+        {
+          "t": 94.50039090000791,
+          "cpu_percent": 61.6
+        },
+        {
+          "t": 95.01551100000506,
+          "cpu_percent": 84.1
+        },
+        {
+          "t": 95.53030920001038,
+          "cpu_percent": 71.9
+        },
+        {
+          "t": 96.04417280000052,
+          "cpu_percent": 68.1
+        },
+        {
+          "t": 96.56132360000629,
+          "cpu_percent": 76.0
+        },
+        {
+          "t": 97.07507690000057,
+          "cpu_percent": 66.3
+        },
+        {
+          "t": 97.58680560000357,
+          "cpu_percent": 72.8
+        },
+        {
+          "t": 98.09014480000769,
+          "cpu_percent": 59.5
+        },
+        {
+          "t": 98.59273530000064,
+          "cpu_percent": 67.3
+        },
+        {
+          "t": 99.10155620001024,
+          "cpu_percent": 61.3
+        },
+        {
+          "t": 99.60293710000406,
+          "cpu_percent": 65.9
+        },
+        {
+          "t": 100.11816740001086,
+          "cpu_percent": 72.1
+        },
+        {
+          "t": 100.63346390001243,
+          "cpu_percent": 57.0
+        },
+        {
+          "t": 101.14931420001085,
+          "cpu_percent": 57.8
+        },
+        {
+          "t": 101.66080420000071,
+          "cpu_percent": 56.8
+        },
+        {
+          "t": 102.17524720000802,
+          "cpu_percent": 74.1
+        },
+        {
+          "t": 102.68787380000867,
+          "cpu_percent": 70.9
+        },
+        {
+          "t": 103.19201030000113,
+          "cpu_percent": 59.6
+        },
+        {
+          "t": 103.70659900001192,
+          "cpu_percent": 59.5
+        },
+        {
+          "t": 104.05656160000945,
+          "cpu_percent": 67.7
+        }
+      ],
+      "avg_padding_ratio": 0.5858516483516484,
+      "avg_decode_waste_ratio": 0.5338983050847458,
+      "batch_summaries": [
+        {
+          "batch_size": 8,
+          "padded_prompt_len": 182,
+          "prefill_time_s": 10.94875029999821,
+          "batch_time_s": 52.468147000006866,
+          "padding_ratio": 0.5865384615384616,
+          "decode_waste_ratio": 0.5338983050847458,
+          "results": [
+            {
+              "request_id": 0,
+              "category": "long",
+              "prompt_tokens": 182,
+              "output_tokens": 60,
+              "own_batch_time_s": 52.468147000006866,
+              "natural_finish_step": null,
+              "text": "Photosynthesis is the process by which plants, algae, and some bacteria convert light energy into chemical energy stored in glucose. This process is crucial for almost all life on Earth, as it provides the energy necessary for almost all cellular activities, including the growth and reproduction of organisms. The process can be divided",
+              "latency_s": 52.468147000006866
+            },
+            {
+              "request_id": 1,
+              "category": "short",
+              "prompt_tokens": 42,
+              "output_tokens": 8,
+              "own_batch_time_s": 52.468147000006866,
+              "natural_finish_step": 8,
+              "text": "The capital of France is Paris.",
+              "latency_s": 52.468147000006866
+            },
+            {
+              "request_id": 2,
+              "category": "short",
+              "prompt_tokens": 41,
+              "output_tokens": 28,
+              "own_batch_time_s": 52.468147000006866,
+              "natural_finish_step": 28,
+              "text": "Yes, the sun is a star, as it is a massive, luminous object that emits light and heat through nuclear fusion reactions.",
+              "latency_s": 52.468147000006866
+            },
+            {
+              "request_id": 3,
+              "category": "short",
+              "prompt_tokens": 43,
+              "output_tokens": 18,
+              "own_batch_time_s": 52.468147000006866,
+              "natural_finish_step": 18,
+              "text": "When you mix blue and yellow, you get a bright, vibrant shade of orange.",
+              "latency_s": 52.468147000006866
+            },
+            {
+              "request_id": 4,
+              "category": "long",
+              "prompt_tokens": 168,
+              "output_tokens": 60,
+              "own_batch_time_s": 52.468147000006866,
+              "natural_finish_step": null,
+              "text": "The water cycle, also known as the hydrological cycle, is a continuous process that involves the movement of water on, above, and below the surface of the Earth. It is a crucial part of the Earth's climate system and plays a vital role in regulating the Earth's temperature and the availability of",
+              "latency_s": 52.468147000006866
+            },
+            {
+              "request_id": 5,
+              "category": "short",
+              "prompt_tokens": 42,
+              "output_tokens": 8,
+              "own_batch_time_s": 52.468147000006866,
+              "natural_finish_step": 8,
+              "text": "The capital of France is Paris.",
+              "latency_s": 52.468147000006866
+            },
+            {
+              "request_id": 6,
+              "category": "short",
+              "prompt_tokens": 41,
+              "output_tokens": 28,
+              "own_batch_time_s": 52.468147000006866,
+              "natural_finish_step": 28,
+              "text": "Yes, the sun is a star, as it is a massive, luminous object that emits light and heat through nuclear fusion reactions.",
+              "latency_s": 52.468147000006866
+            },
+            {
+              "request_id": 7,
+              "category": "short",
+              "prompt_tokens": 43,
+              "output_tokens": 18,
+              "own_batch_time_s": 52.468147000006866,
+              "natural_finish_step": 18,
+              "text": "When you mix blue and yellow, you get a bright, vibrant shade of orange.",
+              "latency_s": 52.468147000006866
+            }
+          ]
+        },
+        {
+          "batch_size": 8,
+          "padded_prompt_len": 182,
+          "prefill_time_s": 10.878161200002069,
+          "batch_time_s": 51.547070900007384,
+          "padding_ratio": 0.5851648351648352,
+          "decode_waste_ratio": 0.5338983050847458,
+          "results": [
+            {
+              "request_id": 8,
+              "category": "long",
+              "prompt_tokens": 170,
+              "output_tokens": 60,
+              "own_batch_time_s": 51.547070900007384,
+              "natural_finish_step": null,
+              "text": "### Understanding Vaccines: How They Train the Immune System\n\nVaccines are designed to stimulate the immune system to recognize and fight off specific pathogens. The process begins with the introduction of a harmless or attenuated pathogen into the body, which triggers an immune response. This response is crucial because",
+              "latency_s": 104.01521790001425
+            },
+            {
+              "request_id": 9,
+              "category": "short",
+              "prompt_tokens": 42,
+              "output_tokens": 8,
+              "own_batch_time_s": 51.547070900007384,
+              "natural_finish_step": 8,
+              "text": "The capital of France is Paris.",
+              "latency_s": 104.01521790001425
+            },
+            {
+              "request_id": 10,
+              "category": "short",
+              "prompt_tokens": 41,
+              "output_tokens": 28,
+              "own_batch_time_s": 51.547070900007384,
+              "natural_finish_step": 28,
+              "text": "Yes, the sun is a star, as it is a massive, luminous object that emits light and heat through nuclear fusion reactions.",
+              "latency_s": 104.01521790001425
+            },
+            {
+              "request_id": 11,
+              "category": "short",
+              "prompt_tokens": 43,
+              "output_tokens": 18,
+              "own_batch_time_s": 51.547070900007384,
+              "natural_finish_step": 18,
+              "text": "When you mix blue and yellow, you get a bright, vibrant shade of orange.",
+              "latency_s": 104.01521790001425
+            },
+            {
+              "request_id": 12,
+              "category": "long",
+              "prompt_tokens": 182,
+              "output_tokens": 60,
+              "own_batch_time_s": 51.547070900007384,
+              "natural_finish_step": null,
+              "text": "Photosynthesis is the process by which plants, algae, and some bacteria convert light energy into chemical energy stored in glucose. This process is crucial for almost all life on Earth, as it provides the energy necessary for almost all cellular activities, including the growth and reproduction of organisms. The process can be divided",
+              "latency_s": 104.01521790001425
+            },
+            {
+              "request_id": 13,
+              "category": "short",
+              "prompt_tokens": 42,
+              "output_tokens": 8,
+              "own_batch_time_s": 51.547070900007384,
+              "natural_finish_step": 8,
+              "text": "The capital of France is Paris.",
+              "latency_s": 104.01521790001425
+            },
+            {
+              "request_id": 14,
+              "category": "short",
+              "prompt_tokens": 41,
+              "output_tokens": 28,
+              "own_batch_time_s": 51.547070900007384,
+              "natural_finish_step": 28,
+              "text": "Yes, the sun is a star, as it is a massive, luminous object that emits light and heat through nuclear fusion reactions.",
+              "latency_s": 104.01521790001425
+            },
+            {
+              "request_id": 15,
+              "category": "short",
+              "prompt_tokens": 43,
+              "output_tokens": 18,
+              "own_batch_time_s": 51.547070900007384,
+              "natural_finish_step": 18,
+              "text": "When you mix blue and yellow, you get a bright, vibrant shade of orange.",
+              "latency_s": 104.01521790001425
+            }
+          ]
+        }
+      ],
+      "results": [
+        {
+          "request_id": 0,
+          "category": "long",
+          "prompt_tokens": 182,
+          "output_tokens": 60,
+          "own_batch_time_s": 52.468147000006866,
+          "natural_finish_step": null,
+          "text": "Photosynthesis is the process by which plants, algae, and some bacteria convert light energy into chemical energy stored in glucose. This process is crucial for almost all life on Earth, as it provides the energy necessary for almost all cellular activities, including the growth and reproduction of organisms. The process can be divided",
+          "latency_s": 52.468147000006866
+        },
+        {
+          "request_id": 1,
+          "category": "short",
+          "prompt_tokens": 42,
+          "output_tokens": 8,
+          "own_batch_time_s": 52.468147000006866,
+          "natural_finish_step": 8,
+          "text": "The capital of France is Paris.",
+          "latency_s": 52.468147000006866
+        },
+        {
+          "request_id": 2,
+          "category": "short",
+          "prompt_tokens": 41,
+          "output_tokens": 28,
+          "own_batch_time_s": 52.468147000006866,
+          "natural_finish_step": 28,
+          "text": "Yes, the sun is a star, as it is a massive, luminous object that emits light and heat through nuclear fusion reactions.",
+          "latency_s": 52.468147000006866
+        },
+        {
+          "request_id": 3,
+          "category": "short",
+          "prompt_tokens": 43,
+          "output_tokens": 18,
+          "own_batch_time_s": 52.468147000006866,
+          "natural_finish_step": 18,
+          "text": "When you mix blue and yellow, you get a bright, vibrant shade of orange.",
+          "latency_s": 52.468147000006866
+        },
+        {
+          "request_id": 4,
+          "category": "long",
+          "prompt_tokens": 168,
+          "output_tokens": 60,
+          "own_batch_time_s": 52.468147000006866,
+          "natural_finish_step": null,
+          "text": "The water cycle, also known as the hydrological cycle, is a continuous process that involves the movement of water on, above, and below the surface of the Earth. It is a crucial part of the Earth's climate system and plays a vital role in regulating the Earth's temperature and the availability of",
+          "latency_s": 52.468147000006866
+        },
+        {
+          "request_id": 5,
+          "category": "short",
+          "prompt_tokens": 42,
+          "output_tokens": 8,
+          "own_batch_time_s": 52.468147000006866,
+          "natural_finish_step": 8,
+          "text": "The capital of France is Paris.",
+          "latency_s": 52.468147000006866
+        },
+        {
+          "request_id": 6,
+          "category": "short",
+          "prompt_tokens": 41,
+          "output_tokens": 28,
+          "own_batch_time_s": 52.468147000006866,
+          "natural_finish_step": 28,
+          "text": "Yes, the sun is a star, as it is a massive, luminous object that emits light and heat through nuclear fusion reactions.",
+          "latency_s": 52.468147000006866
+        },
+        {
+          "request_id": 7,
+          "category": "short",
+          "prompt_tokens": 43,
+          "output_tokens": 18,
+          "own_batch_time_s": 52.468147000006866,
+          "natural_finish_step": 18,
+          "text": "When you mix blue and yellow, you get a bright, vibrant shade of orange.",
+          "latency_s": 52.468147000006866
+        },
+        {
+          "request_id": 8,
+          "category": "long",
+          "prompt_tokens": 170,
+          "output_tokens": 60,
+          "own_batch_time_s": 51.547070900007384,
+          "natural_finish_step": null,
+          "text": "### Understanding Vaccines: How They Train the Immune System\n\nVaccines are designed to stimulate the immune system to recognize and fight off specific pathogens. The process begins with the introduction of a harmless or attenuated pathogen into the body, which triggers an immune response. This response is crucial because",
+          "latency_s": 104.01521790001425
+        },
+        {
+          "request_id": 9,
+          "category": "short",
+          "prompt_tokens": 42,
+          "output_tokens": 8,
+          "own_batch_time_s": 51.547070900007384,
+          "natural_finish_step": 8,
+          "text": "The capital of France is Paris.",
+          "latency_s": 104.01521790001425
+        },
+        {
+          "request_id": 10,
+          "category": "short",
+          "prompt_tokens": 41,
+          "output_tokens": 28,
+          "own_batch_time_s": 51.547070900007384,
+          "natural_finish_step": 28,
+          "text": "Yes, the sun is a star, as it is a massive, luminous object that emits light and heat through nuclear fusion reactions.",
+          "latency_s": 104.01521790001425
+        },
+        {
+          "request_id": 11,
+          "category": "short",
+          "prompt_tokens": 43,
+          "output_tokens": 18,
+          "own_batch_time_s": 51.547070900007384,
+          "natural_finish_step": 18,
+          "text": "When you mix blue and yellow, you get a bright, vibrant shade of orange.",
+          "latency_s": 104.01521790001425
+        },
+        {
+          "request_id": 12,
+          "category": "long",
+          "prompt_tokens": 182,
+          "output_tokens": 60,
+          "own_batch_time_s": 51.547070900007384,
+          "natural_finish_step": null,
+          "text": "Photosynthesis is the process by which plants, algae, and some bacteria convert light energy into chemical energy stored in glucose. This process is crucial for almost all life on Earth, as it provides the energy necessary for almost all cellular activities, including the growth and reproduction of organisms. The process can be divided",
+          "latency_s": 104.01521790001425
+        },
+        {
+          "request_id": 13,
+          "category": "short",
+          "prompt_tokens": 42,
+          "output_tokens": 8,
+          "own_batch_time_s": 51.547070900007384,
+          "natural_finish_step": 8,
+          "text": "The capital of France is Paris.",
+          "latency_s": 104.01521790001425
+        },
+        {
+          "request_id": 14,
+          "category": "short",
+          "prompt_tokens": 41,
+          "output_tokens": 28,
+          "own_batch_time_s": 51.547070900007384,
+          "natural_finish_step": 28,
+          "text": "Yes, the sun is a star, as it is a massive, luminous object that emits light and heat through nuclear fusion reactions.",
+          "latency_s": 104.01521790001425
+        },
+        {
+          "request_id": 15,
+          "category": "short",
+          "prompt_tokens": 43,
+          "output_tokens": 18,
+          "own_batch_time_s": 51.547070900007384,
+          "natural_finish_step": 18,
+          "text": "When you mix blue and yellow, you get a bright, vibrant shade of orange.",
+          "latency_s": 104.01521790001425
+        }
+      ]
+    },
+    "continuous_batching_toy": {
+      "approach": "continuous_batching_toy",
+      "max_slots": 8,
+      "total_time_s": 61.556400700006634,
+      "throughput_tok_s": 7.407840530220456,
+      "avg_cpu_percent": 63.84380165289258,
+      "cpu_samples": [
+        {
+          "t": 0.515555600009975,
+          "cpu_percent": 62.9
+        },
+        {
+          "t": 1.0285455999983242,
+          "cpu_percent": 75.7
+        },
+        {
+          "t": 1.530688700004248,
+          "cpu_percent": 65.4
+        },
+        {
+          "t": 2.045893200003775,
+          "cpu_percent": 62.5
+        },
+        {
+          "t": 2.5488668000034522,
+          "cpu_percent": 70.8
+        },
+        {
+          "t": 3.053687899999204,
+          "cpu_percent": 70.9
+        },
+        {
+          "t": 3.5664909000042826,
+          "cpu_percent": 81.1
+        },
+        {
+          "t": 4.081839700011187,
+          "cpu_percent": 71.9
+        },
+        {
+          "t": 4.585015500008012,
+          "cpu_percent": 56.0
+        },
+        {
+          "t": 5.101784500002395,
+          "cpu_percent": 55.2
+        },
+        {
+          "t": 5.6166367000114406,
+          "cpu_percent": 63.6
+        },
+        {
+          "t": 6.128832300004433,
+          "cpu_percent": 61.1
+        },
+        {
+          "t": 6.6445372000016505,
+          "cpu_percent": 65.0
+        },
+        {
+          "t": 7.154362500004936,
+          "cpu_percent": 67.9
+        },
+        {
+          "t": 7.67354640000849,
+          "cpu_percent": 57.3
+        },
+        {
+          "t": 8.180975000010221,
+          "cpu_percent": 70.1
+        },
+        {
+          "t": 8.693677100003697,
+          "cpu_percent": 57.4
+        },
+        {
+          "t": 9.195023600012064,
+          "cpu_percent": 54.7
+        },
+        {
+          "t": 9.701548600001843,
+          "cpu_percent": 57.4
+        },
+        {
+          "t": 10.213827300001867,
+          "cpu_percent": 63.5
+        },
+        {
+          "t": 10.7262378000014,
+          "cpu_percent": 68.2
+        },
+        {
+          "t": 11.227272600008291,
+          "cpu_percent": 56.3
+        },
+        {
+          "t": 11.731631100003142,
+          "cpu_percent": 58.0
+        },
+        {
+          "t": 12.244543300010264,
+          "cpu_percent": 55.9
+        },
+        {
+          "t": 12.745662500004983,
+          "cpu_percent": 65.1
+        },
+        {
+          "t": 13.26003320000018,
+          "cpu_percent": 65.8
+        },
+        {
+          "t": 13.773970599999302,
+          "cpu_percent": 58.5
+        },
+        {
+          "t": 14.275289400000474,
+          "cpu_percent": 60.6
+        },
+        {
+          "t": 14.790129700006219,
+          "cpu_percent": 54.9
+        },
+        {
+          "t": 15.302680400011013,
+          "cpu_percent": 68.0
+        },
+        {
+          "t": 15.818637500007753,
+          "cpu_percent": 57.0
+        },
+        {
+          "t": 16.33253600000171,
+          "cpu_percent": 54.8
+        },
+        {
+          "t": 16.83617830000003,
+          "cpu_percent": 55.5
+        },
+        {
+          "t": 17.352504000009503,
+          "cpu_percent": 62.8
+        },
+        {
+          "t": 17.86004880000837,
+          "cpu_percent": 66.8
+        },
+        {
+          "t": 18.361595499998657,
+          "cpu_percent": 67.4
+        },
+        {
+          "t": 18.879660999999032,
+          "cpu_percent": 74.5
+        },
+        {
+          "t": 19.38154139999824,
+          "cpu_percent": 57.0
+        },
+        {
+          "t": 19.895892400003504,
+          "cpu_percent": 67.5
+        },
+        {
+          "t": 20.406026500000735,
+          "cpu_percent": 64.5
+        },
+        {
+          "t": 20.921335800012457,
+          "cpu_percent": 56.9
+        },
+        {
+          "t": 21.436236300010933,
+          "cpu_percent": 55.8
+        },
+        {
+          "t": 21.941457900000387,
+          "cpu_percent": 63.5
+        },
+        {
+          "t": 22.452152700003353,
+          "cpu_percent": 79.0
+        },
+        {
+          "t": 22.96728670000448,
+          "cpu_percent": 59.0
+        },
+        {
+          "t": 23.47101950000797,
+          "cpu_percent": 67.2
+        },
+        {
+          "t": 23.98690680001164,
+          "cpu_percent": 69.1
+        },
+        {
+          "t": 24.49940540001262,
+          "cpu_percent": 69.5
+        },
+        {
+          "t": 25.003993200007244,
+          "cpu_percent": 70.0
+        },
+        {
+          "t": 25.517991800006712,
+          "cpu_percent": 70.7
+        },
+        {
+          "t": 26.03575280000223,
+          "cpu_percent": 76.0
+        },
+        {
+          "t": 26.53862960000697,
+          "cpu_percent": 67.9
+        },
+        {
+          "t": 27.041706600008183,
+          "cpu_percent": 67.4
+        },
+        {
+          "t": 27.554615800007014,
+          "cpu_percent": 61.4
+        },
+        {
+          "t": 28.067015600012382,
+          "cpu_percent": 53.8
+        },
+        {
+          "t": 28.580004800009192,
+          "cpu_percent": 74.5
+        },
+        {
+          "t": 29.094691700011026,
+          "cpu_percent": 69.5
+        },
+        {
+          "t": 29.610287600007723,
+          "cpu_percent": 85.1
+        },
+        {
+          "t": 30.122370500001125,
+          "cpu_percent": 60.8
+        },
+        {
+          "t": 30.62462719999894,
+          "cpu_percent": 60.1
+        },
+        {
+          "t": 31.140394800007925,
+          "cpu_percent": 60.3
+        },
+        {
+          "t": 31.65519230000791,
+          "cpu_percent": 61.5
+        },
+        {
+          "t": 32.16606280000997,
+          "cpu_percent": 82.8
+        },
+        {
+          "t": 32.67494420000003,
+          "cpu_percent": 64.1
+        },
+        {
+          "t": 33.18848570001137,
+          "cpu_percent": 69.4
+        },
+        {
+          "t": 33.703491400010535,
+          "cpu_percent": 69.2
+        },
+        {
+          "t": 34.21983000000182,
+          "cpu_percent": 68.6
+        },
+        {
+          "t": 34.73448160001135,
+          "cpu_percent": 77.3
+        },
+        {
+          "t": 35.23694230000547,
+          "cpu_percent": 59.4
+        },
+        {
+          "t": 35.74173740000697,
+          "cpu_percent": 64.3
+        },
+        {
+          "t": 36.24280050001107,
+          "cpu_percent": 57.1
+        },
+        {
+          "t": 36.75864390000061,
+          "cpu_percent": 67.0
+        },
+        {
+          "t": 37.26983820000896,
+          "cpu_percent": 64.8
+        },
+        {
+          "t": 37.784010600007605,
+          "cpu_percent": 60.3
+        },
+        {
+          "t": 38.30095600000641,
+          "cpu_percent": 62.0
+        },
+        {
+          "t": 38.81345910001255,
+          "cpu_percent": 63.9
+        },
+        {
+          "t": 39.33177530000103,
+          "cpu_percent": 76.9
+        },
+        {
+          "t": 39.84040760000062,
+          "cpu_percent": 68.6
+        },
+        {
+          "t": 40.35502680001082,
+          "cpu_percent": 64.7
+        },
+        {
+          "t": 40.860408600012306,
+          "cpu_percent": 60.8
+        },
+        {
+          "t": 41.37468570000783,
+          "cpu_percent": 59.2
+        },
+        {
+          "t": 41.8766878000024,
+          "cpu_percent": 80.7
+        },
+        {
+          "t": 42.3816177000117,
+          "cpu_percent": 69.5
+        },
+        {
+          "t": 42.885196800009,
+          "cpu_percent": 62.5
+        },
+        {
+          "t": 43.401256800003466,
+          "cpu_percent": 59.1
+        },
+        {
+          "t": 43.916683800009196,
+          "cpu_percent": 56.1
+        },
+        {
+          "t": 44.431461600004695,
+          "cpu_percent": 73.4
+        },
+        {
+          "t": 44.94582890000311,
+          "cpu_percent": 56.4
+        },
+        {
+          "t": 45.45986560000165,
+          "cpu_percent": 56.4
+        },
+        {
+          "t": 45.9743610000005,
+          "cpu_percent": 53.8
+        },
+        {
+          "t": 46.48904160001257,
+          "cpu_percent": 64.9
+        },
+        {
+          "t": 46.99429180000152,
+          "cpu_percent": 72.4
+        },
+        {
+          "t": 47.49560690000362,
+          "cpu_percent": 58.5
+        },
+        {
+          "t": 47.99692250000953,
+          "cpu_percent": 58.5
+        },
+        {
+          "t": 48.50020610001229,
+          "cpu_percent": 58.2
+        },
+        {
+          "t": 49.014845600002445,
+          "cpu_percent": 72.5
+        },
+        {
+          "t": 49.51702970000042,
+          "cpu_percent": 67.7
+        },
+        {
+          "t": 50.03010340000037,
+          "cpu_percent": 63.5
+        },
+        {
+          "t": 50.54528470001242,
+          "cpu_percent": 57.1
+        },
+        {
+          "t": 51.047996000008425,
+          "cpu_percent": 59.1
+        },
+        {
+          "t": 51.562151800011634,
+          "cpu_percent": 73.5
+        },
+        {
+          "t": 52.07472440000856,
+          "cpu_percent": 63.5
+        },
+        {
+          "t": 52.57728650000354,
+          "cpu_percent": 57.2
+        },
+        {
+          "t": 53.09226460001082,
+          "cpu_percent": 55.8
+        },
+        {
+          "t": 53.59626640001079,
+          "cpu_percent": 69.9
+        },
+        {
+          "t": 54.10718920000363,
+          "cpu_percent": 72.4
+        },
+        {
+          "t": 54.62310830000206,
+          "cpu_percent": 57.6
+        },
+        {
+          "t": 55.13623380000354,
+          "cpu_percent": 55.6
+        },
+        {
+          "t": 55.63795800000662,
+          "cpu_percent": 55.0
+        },
+        {
+          "t": 56.1482168000075,
+          "cpu_percent": 71.1
+        },
+        {
+          "t": 56.66079190000892,
+          "cpu_percent": 57.9
+        },
+        {
+          "t": 57.17572569999902,
+          "cpu_percent": 53.1
+        },
+        {
+          "t": 57.68589839999913,
+          "cpu_percent": 64.1
+        },
+        {
+          "t": 58.19929070000944,
+          "cpu_percent": 58.6
+        },
+        {
+          "t": 58.713699800006,
+          "cpu_percent": 68.3
+        },
+        {
+          "t": 59.21604769999976,
+          "cpu_percent": 55.2
+        },
+        {
+          "t": 59.73039900000731,
+          "cpu_percent": 55.1
+        },
+        {
+          "t": 60.23326580000867,
+          "cpu_percent": 53.0
+        },
+        {
+          "t": 60.74800310000137,
+          "cpu_percent": 62.9
+        },
+        {
+          "t": 61.26337330001115,
+          "cpu_percent": 59.1
+        },
+        {
+          "t": 61.55845570001111,
+          "cpu_percent": 57.0
+        }
+      ],
+      "results": [
+        {
+          "request_id": 1,
+          "category": "short",
+          "prompt_tokens": 42,
+          "output_tokens": 8,
+          "latency_s": 14.124295900008292,
+          "text": "The capital of France is Paris."
+        },
+        {
+          "request_id": 5,
+          "category": "short",
+          "prompt_tokens": 42,
+          "output_tokens": 8,
+          "latency_s": 14.12432100001024,
+          "text": "The capital of France is Paris."
+        },
+        {
+          "request_id": 9,
+          "category": "short",
+          "prompt_tokens": 42,
+          "output_tokens": 8,
+          "latency_s": 22.115413100007572,
+          "text": "The capital of France is Paris."
+        },
+        {
+          "request_id": 3,
+          "category": "short",
+          "prompt_tokens": 43,
+          "output_tokens": 18,
+          "latency_s": 25.358179200004088,
+          "text": "When you mix blue and yellow, you get a bright, vibrant shade of orange."
+        },
+        {
+          "request_id": 7,
+          "category": "short",
+          "prompt_tokens": 43,
+          "output_tokens": 18,
+          "latency_s": 25.358222900002147,
+          "text": "When you mix blue and yellow, you get a bright, vibrant shade of orange."
+        },
+        {
+          "request_id": 2,
+          "category": "short",
+          "prompt_tokens": 41,
+          "output_tokens": 28,
+          "latency_s": 36.115552600007504,
+          "text": "Yes, the sun is a star, as it is a massive, luminous object that emits light and heat through nuclear fusion reactions."
+        },
+        {
+          "request_id": 6,
+          "category": "short",
+          "prompt_tokens": 41,
+          "output_tokens": 28,
+          "latency_s": 36.115656300011324,
+          "text": "Yes, the sun is a star, as it is a massive, luminous object that emits light and heat through nuclear fusion reactions."
+        },
+        {
+          "request_id": 13,
+          "category": "short",
+          "prompt_tokens": 42,
+          "output_tokens": 8,
+          "latency_s": 43.4654991000134,
+          "text": "The capital of France is Paris."
+        },
+        {
+          "request_id": 11,
+          "category": "short",
+          "prompt_tokens": 43,
+          "output_tokens": 18,
+          "latency_s": 43.465552800000296,
+          "text": "When you mix blue and yellow, you get a bright, vibrant shade of orange."
+        },
+        {
+          "request_id": 10,
+          "category": "short",
+          "prompt_tokens": 41,
+          "output_tokens": 28,
+          "latency_s": 48.82881370000541,
+          "text": "Yes, the sun is a star, as it is a massive, luminous object that emits light and heat through nuclear fusion reactions."
+        },
+        {
+          "request_id": 15,
+          "category": "short",
+          "prompt_tokens": 43,
+          "output_tokens": 18,
+          "latency_s": 54.50091310001153,
+          "text": "When you mix blue and yellow, you get a bright, vibrant shade of orange."
+        },
+        {
+          "request_id": 14,
+          "category": "short",
+          "prompt_tokens": 41,
+          "output_tokens": 28,
+          "latency_s": 56.14017790000071,
+          "text": "Yes, the sun is a star, as it is a massive, luminous object that emits light and heat through nuclear fusion reactions."
+        },
+        {
+          "request_id": 0,
+          "category": "long",
+          "prompt_tokens": 182,
+          "output_tokens": 60,
+          "latency_s": 58.311489400002756,
+          "text": "Photosynthesis is the process by which plants, algae, and some bacteria convert light energy into chemical energy stored in glucose. This process is crucial for almost all life on Earth, as it provides the energy necessary for almost all cellular activities, including the growth and reproduction of organisms. The process can be divided"
+        },
+        {
+          "request_id": 4,
+          "category": "long",
+          "prompt_tokens": 168,
+          "output_tokens": 60,
+          "latency_s": 58.31174000000465,
+          "text": "The water cycle, also known as the hydrological cycle, is a continuous process that involves the movement of water on, above, and below the surface of the Earth. It is a crucial part of the Earth's climate system and plays a vital role in regulating the Earth's temperature and the availability of"
+        },
+        {
+          "request_id": 8,
+          "category": "long",
+          "prompt_tokens": 170,
+          "output_tokens": 60,
+          "latency_s": 59.676780699999654,
+          "text": "### Understanding Vaccines: How They Train the Immune System\n\nVaccines are designed to stimulate the immune system to recognize and fight off specific pathogens. The process begins with the introduction of a harmless or attenuated pathogen into the body, which triggers an immune response. This response is crucial because"
+        },
+        {
+          "request_id": 12,
+          "category": "long",
+          "prompt_tokens": 182,
+          "output_tokens": 60,
+          "latency_s": 61.556388200013316,
+          "text": "Photosynthesis is the process by which plants, algae, and some bacteria convert light energy into chemical energy stored in glucose. This process is crucial for almost all life on Earth, as it provides the energy necessary for almost all cellular activities, including the growth and reproduction of organisms. The process can be divided"
+        }
+      ]
+    },
+    "vllm_batching": {
+      "skipped": true,
+      "reason": "vLLM is not importable in this environment (No module named 'vllm'). Running on Windows 10. Same limitation established in module 01: vLLM ships no Windows wheels and this machine has no usable Linux/WSL2 distro."
+    }
+  }
+}

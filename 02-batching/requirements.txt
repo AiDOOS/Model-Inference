@@ -1,0 +1,11 @@
+transformers>=4.40
+torch>=2.2
+psutil>=5.9
+
+# vLLM is deliberately NOT pinned here - same reason as module 01's
+# requirements.txt: it ships no Windows wheels (verified against PyPI
+# through 0.27.1). If you're running this module from Linux or WSL2,
+# install it separately:
+#   pip install vllm
+# vllm_batching.py and benchmark.py both detect whether it's importable
+# and report clearly if it isn't, instead of failing hard.
