@@ -1,0 +1,2143 @@
+{
+  "memory_budget_bytes": 25165824,
+  "max_new_tokens": 60,
+  "table": [
+    {
+      "approach": "Naive allocation",
+      "max_concurrent_fit": 4,
+      "waste_percent": 59.63541666666667,
+      "total_time_s": 87.52415309997741,
+      "throughput_tok_s": 7.814985644233289
+    },
+    {
+      "approach": "Manual paged",
+      "max_concurrent_fit": 11,
+      "waste_percent": 8.823529411764708,
+      "total_time_s": 77.0409229999932,
+      "throughput_tok_s": 8.878398302679479
+    },
+    {
+      "approach": "vLLM",
+      "max_concurrent_fit": null,
+      "waste_percent": null,
+      "total_time_s": null,
+      "throughput_tok_s": null
+    }
+  ],
+  "raw": {
+    "naive_allocation": {
+      "approach": "naive_allocation",
+      "budget_bytes": 25165824,
+      "bytes_per_token": 24576.0,
+      "max_seq_len_reservation": 256,
+      "peak_concurrent": 4,
+      "peak_reserved_bytes": 25165824.0,
+      "waste_percent": 59.63541666666667,
+      "total_time_s": 87.52415309997741,
+      "throughput_tok_s": 7.814985644233289,
+      "admitted_over_time": [
+        {
+          "iteration": 0,
+          "active_count": 4,
+          "reserved_bytes": 25165824.0
+        },
+        {
+          "iteration": 1,
+          "active_count": 4,
+          "reserved_bytes": 25165824.0
+        },
+        {
+          "iteration": 2,
+          "active_count": 4,
+          "reserved_bytes": 25165824.0
+        },
+        {
+          "iteration": 3,
+          "active_count": 4,
+          "reserved_bytes": 25165824.0
+        },
+        {
+          "iteration": 4,
+          "active_count": 4,
+          "reserved_bytes": 25165824.0
+        },
+        {
+          "iteration": 5,
+          "active_count": 4,
+          "reserved_bytes": 25165824.0
+        },
+        {
+          "iteration": 6,
+          "active_count": 4,
+          "reserved_bytes": 25165824.0
+        },
+        {
+          "iteration": 7,
+          "active_count": 4,
+          "reserved_bytes": 25165824.0
+        },
+        {
+          "iteration": 8,
+          "active_count": 4,
+          "reserved_bytes": 25165824.0
+        },
+        {
+          "iteration": 9,
+          "active_count": 4,
+          "reserved_bytes": 25165824.0
+        },
+        {
+          "iteration": 10,
+          "active_count": 4,
+          "reserved_bytes": 25165824.0
+        },
+        {
+          "iteration": 11,
+          "active_count": 4,
+          "reserved_bytes": 25165824.0
+        },
+        {
+          "iteration": 12,
+          "active_count": 4,
+          "reserved_bytes": 25165824.0
+        },
+        {
+          "iteration": 13,
+          "active_count": 4,
+          "reserved_bytes": 25165824.0
+        },
+        {
+          "iteration": 14,
+          "active_count": 4,
+          "reserved_bytes": 25165824.0
+        },
+        {
+          "iteration": 15,
+          "active_count": 4,
+          "reserved_bytes": 25165824.0
+        },
+        {
+          "iteration": 16,
+          "active_count": 4,
+          "reserved_bytes": 25165824.0
+        },
+        {
+          "iteration": 17,
+          "active_count": 4,
+          "reserved_bytes": 25165824.0
+        },
+        {
+          "iteration": 18,
+          "active_count": 4,
+          "reserved_bytes": 25165824.0
+        },
+        {
+          "iteration": 19,
+          "active_count": 4,
+          "reserved_bytes": 25165824.0
+        },
+        {
+          "iteration": 20,
+          "active_count": 4,
+          "reserved_bytes": 25165824.0
+        },
+        {
+          "iteration": 21,
+          "active_count": 4,
+          "reserved_bytes": 25165824.0
+        },
+        {
+          "iteration": 22,
+          "active_count": 4,
+          "reserved_bytes": 25165824.0
+        },
+        {
+          "iteration": 23,
+          "active_count": 4,
+          "reserved_bytes": 25165824.0
+        },
+        {
+          "iteration": 24,
+          "active_count": 4,
+          "reserved_bytes": 25165824.0
+        },
+        {
+          "iteration": 25,
+          "active_count": 4,
+          "reserved_bytes": 25165824.0
+        },
+        {
+          "iteration": 26,
+          "active_count": 4,
+          "reserved_bytes": 25165824.0
+        },
+        {
+          "iteration": 27,
+          "active_count": 4,
+          "reserved_bytes": 25165824.0
+        },
+        {
+          "iteration": 28,
+          "active_count": 4,
+          "reserved_bytes": 25165824.0
+        },
+        {
+          "iteration": 29,
+          "active_count": 4,
+          "reserved_bytes": 25165824.0
+        },
+        {
+          "iteration": 30,
+          "active_count": 4,
+          "reserved_bytes": 25165824.0
+        },
+        {
+          "iteration": 31,
+          "active_count": 4,
+          "reserved_bytes": 25165824.0
+        },
+        {
+          "iteration": 32,
+          "active_count": 4,
+          "reserved_bytes": 25165824.0
+        },
+        {
+          "iteration": 33,
+          "active_count": 4,
+          "reserved_bytes": 25165824.0
+        },
+        {
+          "iteration": 34,
+          "active_count": 4,
+          "reserved_bytes": 25165824.0
+        },
+        {
+          "iteration": 35,
+          "active_count": 4,
+          "reserved_bytes": 25165824.0
+        },
+        {
+          "iteration": 36,
+          "active_count": 4,
+          "reserved_bytes": 25165824.0
+        },
+        {
+          "iteration": 37,
+          "active_count": 4,
+          "reserved_bytes": 25165824.0
+        },
+        {
+          "iteration": 38,
+          "active_count": 4,
+          "reserved_bytes": 25165824.0
+        },
+        {
+          "iteration": 39,
+          "active_count": 4,
+          "reserved_bytes": 25165824.0
+        },
+        {
+          "iteration": 40,
+          "active_count": 4,
+          "reserved_bytes": 25165824.0
+        },
+        {
+          "iteration": 41,
+          "active_count": 4,
+          "reserved_bytes": 25165824.0
+        },
+        {
+          "iteration": 42,
+          "active_count": 4,
+          "reserved_bytes": 25165824.0
+        },
+        {
+          "iteration": 43,
+          "active_count": 4,
+          "reserved_bytes": 25165824.0
+        },
+        {
+          "iteration": 44,
+          "active_count": 4,
+          "reserved_bytes": 25165824.0
+        },
+        {
+          "iteration": 45,
+          "active_count": 4,
+          "reserved_bytes": 25165824.0
+        },
+        {
+          "iteration": 46,
+          "active_count": 4,
+          "reserved_bytes": 25165824.0
+        },
+        {
+          "iteration": 47,
+          "active_count": 4,
+          "reserved_bytes": 25165824.0
+        },
+        {
+          "iteration": 48,
+          "active_count": 4,
+          "reserved_bytes": 25165824.0
+        },
+        {
+          "iteration": 49,
+          "active_count": 4,
+          "reserved_bytes": 25165824.0
+        },
+        {
+          "iteration": 50,
+          "active_count": 4,
+          "reserved_bytes": 25165824.0
+        },
+        {
+          "iteration": 51,
+          "active_count": 4,
+          "reserved_bytes": 25165824.0
+        },
+        {
+          "iteration": 52,
+          "active_count": 4,
+          "reserved_bytes": 25165824.0
+        },
+        {
+          "iteration": 53,
+          "active_count": 4,
+          "reserved_bytes": 25165824.0
+        },
+        {
+          "iteration": 54,
+          "active_count": 4,
+          "reserved_bytes": 25165824.0
+        },
+        {
+          "iteration": 55,
+          "active_count": 4,
+          "reserved_bytes": 25165824.0
+        },
+        {
+          "iteration": 56,
+          "active_count": 4,
+          "reserved_bytes": 25165824.0
+        },
+        {
+          "iteration": 57,
+          "active_count": 4,
+          "reserved_bytes": 25165824.0
+        },
+        {
+          "iteration": 58,
+          "active_count": 4,
+          "reserved_bytes": 25165824.0
+        },
+        {
+          "iteration": 59,
+          "active_count": 4,
+          "reserved_bytes": 25165824.0
+        },
+        {
+          "iteration": 60,
+          "active_count": 4,
+          "reserved_bytes": 25165824.0
+        },
+        {
+          "iteration": 61,
+          "active_count": 4,
+          "reserved_bytes": 25165824.0
+        },
+        {
+          "iteration": 62,
+          "active_count": 4,
+          "reserved_bytes": 25165824.0
+        },
+        {
+          "iteration": 63,
+          "active_count": 4,
+          "reserved_bytes": 25165824.0
+        },
+        {
+          "iteration": 64,
+          "active_count": 4,
+          "reserved_bytes": 25165824.0
+        },
+        {
+          "iteration": 65,
+          "active_count": 4,
+          "reserved_bytes": 25165824.0
+        },
+        {
+          "iteration": 66,
+          "active_count": 4,
+          "reserved_bytes": 25165824.0
+        },
+        {
+          "iteration": 67,
+          "active_count": 4,
+          "reserved_bytes": 25165824.0
+        },
+        {
+          "iteration": 68,
+          "active_count": 4,
+          "reserved_bytes": 25165824.0
+        },
+        {
+          "iteration": 69,
+          "active_count": 4,
+          "reserved_bytes": 25165824.0
+        },
+        {
+          "iteration": 70,
+          "active_count": 4,
+          "reserved_bytes": 25165824.0
+        },
+        {
+          "iteration": 71,
+          "active_count": 4,
+          "reserved_bytes": 25165824.0
+        },
+        {
+          "iteration": 72,
+          "active_count": 4,
+          "reserved_bytes": 25165824.0
+        },
+        {
+          "iteration": 73,
+          "active_count": 4,
+          "reserved_bytes": 25165824.0
+        },
+        {
+          "iteration": 74,
+          "active_count": 4,
+          "reserved_bytes": 25165824.0
+        },
+        {
+          "iteration": 75,
+          "active_count": 4,
+          "reserved_bytes": 25165824.0
+        },
+        {
+          "iteration": 76,
+          "active_count": 4,
+          "reserved_bytes": 25165824.0
+        },
+        {
+          "iteration": 77,
+          "active_count": 4,
+          "reserved_bytes": 25165824.0
+        },
+        {
+          "iteration": 78,
+          "active_count": 4,
+          "reserved_bytes": 25165824.0
+        },
+        {
+          "iteration": 79,
+          "active_count": 4,
+          "reserved_bytes": 25165824.0
+        },
+        {
+          "iteration": 80,
+          "active_count": 4,
+          "reserved_bytes": 25165824.0
+        },
+        {
+          "iteration": 81,
+          "active_count": 4,
+          "reserved_bytes": 25165824.0
+        },
+        {
+          "iteration": 82,
+          "active_count": 4,
+          "reserved_bytes": 25165824.0
+        },
+        {
+          "iteration": 83,
+          "active_count": 4,
+          "reserved_bytes": 25165824.0
+        },
+        {
+          "iteration": 84,
+          "active_count": 4,
+          "reserved_bytes": 25165824.0
+        },
+        {
+          "iteration": 85,
+          "active_count": 4,
+          "reserved_bytes": 25165824.0
+        },
+        {
+          "iteration": 86,
+          "active_count": 4,
+          "reserved_bytes": 25165824.0
+        },
+        {
+          "iteration": 87,
+          "active_count": 4,
+          "reserved_bytes": 25165824.0
+        },
+        {
+          "iteration": 88,
+          "active_count": 4,
+          "reserved_bytes": 25165824.0
+        },
+        {
+          "iteration": 89,
+          "active_count": 4,
+          "reserved_bytes": 25165824.0
+        },
+        {
+          "iteration": 90,
+          "active_count": 4,
+          "reserved_bytes": 25165824.0
+        },
+        {
+          "iteration": 91,
+          "active_count": 4,
+          "reserved_bytes": 25165824.0
+        },
+        {
+          "iteration": 92,
+          "active_count": 4,
+          "reserved_bytes": 25165824.0
+        },
+        {
+          "iteration": 93,
+          "active_count": 4,
+          "reserved_bytes": 25165824.0
+        },
+        {
+          "iteration": 94,
+          "active_count": 4,
+          "reserved_bytes": 25165824.0
+        },
+        {
+          "iteration": 95,
+          "active_count": 4,
+          "reserved_bytes": 25165824.0
+        },
+        {
+          "iteration": 96,
+          "active_count": 4,
+          "reserved_bytes": 25165824.0
+        },
+        {
+          "iteration": 97,
+          "active_count": 4,
+          "reserved_bytes": 25165824.0
+        },
+        {
+          "iteration": 98,
+          "active_count": 4,
+          "reserved_bytes": 25165824.0
+        },
+        {
+          "iteration": 99,
+          "active_count": 4,
+          "reserved_bytes": 25165824.0
+        },
+        {
+          "iteration": 100,
+          "active_count": 4,
+          "reserved_bytes": 25165824.0
+        },
+        {
+          "iteration": 101,
+          "active_count": 4,
+          "reserved_bytes": 25165824.0
+        },
+        {
+          "iteration": 102,
+          "active_count": 4,
+          "reserved_bytes": 25165824.0
+        },
+        {
+          "iteration": 103,
+          "active_count": 4,
+          "reserved_bytes": 25165824.0
+        },
+        {
+          "iteration": 104,
+          "active_count": 4,
+          "reserved_bytes": 25165824.0
+        },
+        {
+          "iteration": 105,
+          "active_count": 4,
+          "reserved_bytes": 25165824.0
+        },
+        {
+          "iteration": 106,
+          "active_count": 4,
+          "reserved_bytes": 25165824.0
+        },
+        {
+          "iteration": 107,
+          "active_count": 4,
+          "reserved_bytes": 25165824.0
+        },
+        {
+          "iteration": 108,
+          "active_count": 4,
+          "reserved_bytes": 25165824.0
+        },
+        {
+          "iteration": 109,
+          "active_count": 4,
+          "reserved_bytes": 25165824.0
+        },
+        {
+          "iteration": 110,
+          "active_count": 4,
+          "reserved_bytes": 25165824.0
+        },
+        {
+          "iteration": 111,
+          "active_count": 4,
+          "reserved_bytes": 25165824.0
+        },
+        {
+          "iteration": 112,
+          "active_count": 4,
+          "reserved_bytes": 25165824.0
+        },
+        {
+          "iteration": 113,
+          "active_count": 4,
+          "reserved_bytes": 25165824.0
+        },
+        {
+          "iteration": 114,
+          "active_count": 4,
+          "reserved_bytes": 25165824.0
+        },
+        {
+          "iteration": 115,
+          "active_count": 4,
+          "reserved_bytes": 25165824.0
+        },
+        {
+          "iteration": 116,
+          "active_count": 4,
+          "reserved_bytes": 25165824.0
+        },
+        {
+          "iteration": 117,
+          "active_count": 4,
+          "reserved_bytes": 25165824.0
+        },
+        {
+          "iteration": 118,
+          "active_count": 4,
+          "reserved_bytes": 25165824.0
+        },
+        {
+          "iteration": 119,
+          "active_count": 4,
+          "reserved_bytes": 25165824.0
+        },
+        {
+          "iteration": 120,
+          "active_count": 4,
+          "reserved_bytes": 25165824.0
+        },
+        {
+          "iteration": 121,
+          "active_count": 4,
+          "reserved_bytes": 25165824.0
+        },
+        {
+          "iteration": 122,
+          "active_count": 4,
+          "reserved_bytes": 25165824.0
+        },
+        {
+          "iteration": 123,
+          "active_count": 4,
+          "reserved_bytes": 25165824.0
+        },
+        {
+          "iteration": 124,
+          "active_count": 4,
+          "reserved_bytes": 25165824.0
+        },
+        {
+          "iteration": 125,
+          "active_count": 4,
+          "reserved_bytes": 25165824.0
+        },
+        {
+          "iteration": 126,
+          "active_count": 4,
+          "reserved_bytes": 25165824.0
+        },
+        {
+          "iteration": 127,
+          "active_count": 4,
+          "reserved_bytes": 25165824.0
+        },
+        {
+          "iteration": 128,
+          "active_count": 4,
+          "reserved_bytes": 25165824.0
+        },
+        {
+          "iteration": 129,
+          "active_count": 4,
+          "reserved_bytes": 25165824.0
+        },
+        {
+          "iteration": 130,
+          "active_count": 4,
+          "reserved_bytes": 25165824.0
+        },
+        {
+          "iteration": 131,
+          "active_count": 4,
+          "reserved_bytes": 25165824.0
+        },
+        {
+          "iteration": 132,
+          "active_count": 4,
+          "reserved_bytes": 25165824.0
+        },
+        {
+          "iteration": 133,
+          "active_count": 4,
+          "reserved_bytes": 25165824.0
+        },
+        {
+          "iteration": 134,
+          "active_count": 4,
+          "reserved_bytes": 25165824.0
+        },
+        {
+          "iteration": 135,
+          "active_count": 4,
+          "reserved_bytes": 25165824.0
+        },
+        {
+          "iteration": 136,
+          "active_count": 4,
+          "reserved_bytes": 25165824.0
+        },
+        {
+          "iteration": 137,
+          "active_count": 4,
+          "reserved_bytes": 25165824.0
+        },
+        {
+          "iteration": 138,
+          "active_count": 4,
+          "reserved_bytes": 25165824.0
+        },
+        {
+          "iteration": 139,
+          "active_count": 4,
+          "reserved_bytes": 25165824.0
+        },
+        {
+          "iteration": 140,
+          "active_count": 4,
+          "reserved_bytes": 25165824.0
+        },
+        {
+          "iteration": 141,
+          "active_count": 4,
+          "reserved_bytes": 25165824.0
+        },
+        {
+          "iteration": 142,
+          "active_count": 4,
+          "reserved_bytes": 25165824.0
+        },
+        {
+          "iteration": 143,
+          "active_count": 4,
+          "reserved_bytes": 25165824.0
+        },
+        {
+          "iteration": 144,
+          "active_count": 4,
+          "reserved_bytes": 25165824.0
+        },
+        {
+          "iteration": 145,
+          "active_count": 4,
+          "reserved_bytes": 25165824.0
+        },
+        {
+          "iteration": 146,
+          "active_count": 4,
+          "reserved_bytes": 25165824.0
+        },
+        {
+          "iteration": 147,
+          "active_count": 4,
+          "reserved_bytes": 25165824.0
+        },
+        {
+          "iteration": 148,
+          "active_count": 4,
+          "reserved_bytes": 25165824.0
+        },
+        {
+          "iteration": 149,
+          "active_count": 4,
+          "reserved_bytes": 25165824.0
+        },
+        {
+          "iteration": 150,
+          "active_count": 4,
+          "reserved_bytes": 25165824.0
+        },
+        {
+          "iteration": 151,
+          "active_count": 4,
+          "reserved_bytes": 25165824.0
+        },
+        {
+          "iteration": 152,
+          "active_count": 4,
+          "reserved_bytes": 25165824.0
+        },
+        {
+          "iteration": 153,
+          "active_count": 4,
+          "reserved_bytes": 25165824.0
+        },
+        {
+          "iteration": 154,
+          "active_count": 3,
+          "reserved_bytes": 18874368.0
+        },
+        {
+          "iteration": 155,
+          "active_count": 3,
+          "reserved_bytes": 18874368.0
+        },
+        {
+          "iteration": 156,
+          "active_count": 3,
+          "reserved_bytes": 18874368.0
+        },
+        {
+          "iteration": 157,
+          "active_count": 3,
+          "reserved_bytes": 18874368.0
+        },
+        {
+          "iteration": 158,
+          "active_count": 3,
+          "reserved_bytes": 18874368.0
+        },
+        {
+          "iteration": 159,
+          "active_count": 3,
+          "reserved_bytes": 18874368.0
+        },
+        {
+          "iteration": 160,
+          "active_count": 3,
+          "reserved_bytes": 18874368.0
+        },
+        {
+          "iteration": 161,
+          "active_count": 1,
+          "reserved_bytes": 6291456.0
+        },
+        {
+          "iteration": 162,
+          "active_count": 1,
+          "reserved_bytes": 6291456.0
+        },
+        {
+          "iteration": 163,
+          "active_count": 1,
+          "reserved_bytes": 6291456.0
+        },
+        {
+          "iteration": 164,
+          "active_count": 1,
+          "reserved_bytes": 6291456.0
+        },
+        {
+          "iteration": 165,
+          "active_count": 1,
+          "reserved_bytes": 6291456.0
+        },
+        {
+          "iteration": 166,
+          "active_count": 1,
+          "reserved_bytes": 6291456.0
+        },
+        {
+          "iteration": 167,
+          "active_count": 1,
+          "reserved_bytes": 6291456.0
+        },
+        {
+          "iteration": 168,
+          "active_count": 1,
+          "reserved_bytes": 6291456.0
+        },
+        {
+          "iteration": 169,
+          "active_count": 1,
+          "reserved_bytes": 6291456.0
+        },
+        {
+          "iteration": 170,
+          "active_count": 1,
+          "reserved_bytes": 6291456.0
+        },
+        {
+          "iteration": 171,
+          "active_count": 1,
+          "reserved_bytes": 6291456.0
+        },
+        {
+          "iteration": 172,
+          "active_count": 1,
+          "reserved_bytes": 6291456.0
+        },
+        {
+          "iteration": 173,
+          "active_count": 1,
+          "reserved_bytes": 6291456.0
+        },
+        {
+          "iteration": 174,
+          "active_count": 1,
+          "reserved_bytes": 6291456.0
+        },
+        {
+          "iteration": 175,
+          "active_count": 1,
+          "reserved_bytes": 6291456.0
+        },
+        {
+          "iteration": 176,
+          "active_count": 1,
+          "reserved_bytes": 6291456.0
+        },
+        {
+          "iteration": 177,
+          "active_count": 1,
+          "reserved_bytes": 6291456.0
+        },
+        {
+          "iteration": 178,
+          "active_count": 1,
+          "reserved_bytes": 6291456.0
+        },
+        {
+          "iteration": 179,
+          "active_count": 1,
+          "reserved_bytes": 6291456.0
+        },
+        {
+          "iteration": 180,
+          "active_count": 1,
+          "reserved_bytes": 6291456.0
+        },
+        {
+          "iteration": 181,
+          "active_count": 1,
+          "reserved_bytes": 6291456.0
+        },
+        {
+          "iteration": 182,
+          "active_count": 1,
+          "reserved_bytes": 6291456.0
+        },
+        {
+          "iteration": 183,
+          "active_count": 1,
+          "reserved_bytes": 6291456.0
+        },
+        {
+          "iteration": 184,
+          "active_count": 0,
+          "reserved_bytes": 0.0
+        }
+      ],
+      "results": [
+        {
+          "request_id": 1,
+          "category": "short",
+          "prompt_tokens": 42,
+          "output_tokens": 8,
+          "actual_len_tokens": 50,
+          "reserved_len_tokens": 256,
+          "waste_tokens": 206,
+          "latency_s": 6.637836599984439,
+          "text": "The capital of France is Paris."
+        },
+        {
+          "request_id": 3,
+          "category": "short",
+          "prompt_tokens": 43,
+          "output_tokens": 18,
+          "actual_len_tokens": 61,
+          "reserved_len_tokens": 256,
+          "waste_tokens": 195,
+          "latency_s": 11.951960199978203,
+          "text": "When you mix blue and yellow, you get a bright, vibrant shade of orange."
+        },
+        {
+          "request_id": 5,
+          "category": "short",
+          "prompt_tokens": 42,
+          "output_tokens": 8,
+          "actual_len_tokens": 50,
+          "reserved_len_tokens": 256,
+          "waste_tokens": 206,
+          "latency_s": 15.355385799979558,
+          "text": "The capital of France is Paris."
+        },
+        {
+          "request_id": 2,
+          "category": "short",
+          "prompt_tokens": 41,
+          "output_tokens": 28,
+          "actual_len_tokens": 69,
+          "reserved_len_tokens": 256,
+          "waste_tokens": 187,
+          "latency_s": 17.20590919998358,
+          "text": "Yes, the sun is a star, as it is a massive, luminous object that emits light and heat through nuclear fusion reactions."
+        },
+        {
+          "request_id": 7,
+          "category": "short",
+          "prompt_tokens": 43,
+          "output_tokens": 18,
+          "actual_len_tokens": 61,
+          "reserved_len_tokens": 256,
+          "waste_tokens": 195,
+          "latency_s": 24.390727199992398,
+          "text": "When you mix blue and yellow, you get a bright, vibrant shade of orange."
+        },
+        {
+          "request_id": 6,
+          "category": "short",
+          "prompt_tokens": 41,
+          "output_tokens": 28,
+          "actual_len_tokens": 69,
+          "reserved_len_tokens": 256,
+          "waste_tokens": 187,
+          "latency_s": 28.62488129999838,
+          "text": "Yes, the sun is a star, as it is a massive, luminous object that emits light and heat through nuclear fusion reactions."
+        },
+        {
+          "request_id": 9,
+          "category": "short",
+          "prompt_tokens": 42,
+          "output_tokens": 8,
+          "actual_len_tokens": 50,
+          "reserved_len_tokens": 256,
+          "waste_tokens": 206,
+          "latency_s": 32.077529699978186,
+          "text": "The capital of France is Paris."
+        },
+        {
+          "request_id": 0,
+          "category": "long",
+          "prompt_tokens": 182,
+          "output_tokens": 60,
+          "actual_len_tokens": 242,
+          "reserved_len_tokens": 256,
+          "waste_tokens": 14,
+          "latency_s": 33.26001479997649,
+          "text": "Photosynthesis is the process by which plants, algae, and some bacteria convert light energy into chemical energy stored in glucose. This process is crucial for almost all life on Earth, as it provides the energy necessary for almost all cellular activities, including the growth and reproduction of organisms. The process can be divided"
+        },
+        {
+          "request_id": 4,
+          "category": "long",
+          "prompt_tokens": 168,
+          "output_tokens": 60,
+          "actual_len_tokens": 228,
+          "reserved_len_tokens": 256,
+          "waste_tokens": 28,
+          "latency_s": 36.60196439997526,
+          "text": "The water cycle, also known as the hydrological cycle, is a continuous process that involves the movement of water on, above, and below the surface of the Earth. It is a crucial part of the Earth's climate system and plays a vital role in regulating the Earth's temperature and the availability of"
+        },
+        {
+          "request_id": 11,
+          "category": "short",
+          "prompt_tokens": 43,
+          "output_tokens": 18,
+          "actual_len_tokens": 61,
+          "reserved_len_tokens": 256,
+          "waste_tokens": 195,
+          "latency_s": 42.05639789998531,
+          "text": "When you mix blue and yellow, you get a bright, vibrant shade of orange."
+        },
+        {
+          "request_id": 13,
+          "category": "short",
+          "prompt_tokens": 42,
+          "output_tokens": 8,
+          "actual_len_tokens": 50,
+          "reserved_len_tokens": 256,
+          "waste_tokens": 206,
+          "latency_s": 45.467750599986175,
+          "text": "The capital of France is Paris."
+        },
+        {
+          "request_id": 10,
+          "category": "short",
+          "prompt_tokens": 41,
+          "output_tokens": 28,
+          "actual_len_tokens": 69,
+          "reserved_len_tokens": 256,
+          "waste_tokens": 187,
+          "latency_s": 47.01668359999894,
+          "text": "Yes, the sun is a star, as it is a massive, luminous object that emits light and heat through nuclear fusion reactions."
+        },
+        {
+          "request_id": 15,
+          "category": "short",
+          "prompt_tokens": 43,
+          "output_tokens": 18,
+          "actual_len_tokens": 61,
+          "reserved_len_tokens": 256,
+          "waste_tokens": 195,
+          "latency_s": 54.20317329998943,
+          "text": "When you mix blue and yellow, you get a bright, vibrant shade of orange."
+        },
+        {
+          "request_id": 8,
+          "category": "long",
+          "prompt_tokens": 170,
+          "output_tokens": 60,
+          "actual_len_tokens": 230,
+          "reserved_len_tokens": 256,
+          "waste_tokens": 26,
+          "latency_s": 56.124236399977235,
+          "text": "### Understanding Vaccines: How They Train the Immune System\n\nVaccines are designed to stimulate the immune system to recognize and fight off specific pathogens. The process begins with the introduction of a harmless or attenuated pathogen into the body, which triggers an immune response. This response is crucial because"
+        },
+        {
+          "request_id": 14,
+          "category": "short",
+          "prompt_tokens": 41,
+          "output_tokens": 28,
+          "actual_len_tokens": 69,
+          "reserved_len_tokens": 256,
+          "waste_tokens": 187,
+          "latency_s": 59.5353489999834,
+          "text": "Yes, the sun is a star, as it is a massive, luminous object that emits light and heat through nuclear fusion reactions."
+        },
+        {
+          "request_id": 17,
+          "category": "short",
+          "prompt_tokens": 42,
+          "output_tokens": 8,
+          "actual_len_tokens": 50,
+          "reserved_len_tokens": 256,
+          "waste_tokens": 206,
+          "latency_s": 59.535376199986786,
+          "text": "The capital of France is Paris."
+        },
+        {
+          "request_id": 12,
+          "category": "long",
+          "prompt_tokens": 182,
+          "output_tokens": 60,
+          "actual_len_tokens": 242,
+          "reserved_len_tokens": 256,
+          "waste_tokens": 14,
+          "latency_s": 66.68085889998474,
+          "text": "Photosynthesis is the process by which plants, algae, and some bacteria convert light energy into chemical energy stored in glucose. This process is crucial for almost all life on Earth, as it provides the energy necessary for almost all cellular activities, including the growth and reproduction of organisms. The process can be divided"
+        },
+        {
+          "request_id": 19,
+          "category": "short",
+          "prompt_tokens": 43,
+          "output_tokens": 18,
+          "actual_len_tokens": 61,
+          "reserved_len_tokens": 256,
+          "waste_tokens": 195,
+          "latency_s": 69.04079649999039,
+          "text": "When you mix blue and yellow, you get a bright, vibrant shade of orange."
+        },
+        {
+          "request_id": 21,
+          "category": "short",
+          "prompt_tokens": 42,
+          "output_tokens": 8,
+          "actual_len_tokens": 50,
+          "reserved_len_tokens": 256,
+          "waste_tokens": 206,
+          "latency_s": 72.42215539998142,
+          "text": "The capital of France is Paris."
+        },
+        {
+          "request_id": 18,
+          "category": "short",
+          "prompt_tokens": 41,
+          "output_tokens": 28,
+          "actual_len_tokens": 69,
+          "reserved_len_tokens": 256,
+          "waste_tokens": 187,
+          "latency_s": 74.34929419998662,
+          "text": "Yes, the sun is a star, as it is a massive, luminous object that emits light and heat through nuclear fusion reactions."
+        },
+        {
+          "request_id": 23,
+          "category": "short",
+          "prompt_tokens": 43,
+          "output_tokens": 18,
+          "actual_len_tokens": 61,
+          "reserved_len_tokens": 256,
+          "waste_tokens": 195,
+          "latency_s": 81.65886440000031,
+          "text": "When you mix blue and yellow, you get a bright, vibrant shade of orange."
+        },
+        {
+          "request_id": 16,
+          "category": "long",
+          "prompt_tokens": 168,
+          "output_tokens": 60,
+          "actual_len_tokens": 228,
+          "reserved_len_tokens": 256,
+          "waste_tokens": 28,
+          "latency_s": 83.46577479998814,
+          "text": "The water cycle, also known as the hydrological cycle, is a continuous process that involves the movement of water on, above, and below the surface of the Earth. It is a crucial part of the Earth's climate system and plays a vital role in regulating the Earth's temperature and the availability of"
+        },
+        {
+          "request_id": 22,
+          "category": "short",
+          "prompt_tokens": 41,
+          "output_tokens": 28,
+          "actual_len_tokens": 69,
+          "reserved_len_tokens": 256,
+          "waste_tokens": 187,
+          "latency_s": 83.46582939999644,
+          "text": "Yes, the sun is a star, as it is a massive, luminous object that emits light and heat through nuclear fusion reactions."
+        },
+        {
+          "request_id": 20,
+          "category": "long",
+          "prompt_tokens": 170,
+          "output_tokens": 60,
+          "actual_len_tokens": 230,
+          "reserved_len_tokens": 256,
+          "waste_tokens": 26,
+          "latency_s": 87.52414339999086,
+          "text": "### Understanding Vaccines: How They Train the Immune System\n\nVaccines are designed to stimulate the immune system to recognize and fight off specific pathogens. The process begins with the introduction of a harmless or attenuated pathogen into the body, which triggers an immune response. This response is crucial because"
+        }
+      ]
+    },
+    "manual_paged_attention": {
+      "approach": "manual_paged_attention",
+      "budget_bytes": 25165824,
+      "bytes_per_token": 24576.0,
+      "block_size_tokens": 16,
+      "total_blocks": 64,
+      "peak_concurrent": 11,
+      "peak_blocks_in_use": 64,
+      "stalls": 0,
+      "internal_fragmentation_percent": 8.823529411764708,
+      "block_table_overhead_bytes": 680,
+      "total_time_s": 77.0409229999932,
+      "throughput_tok_s": 8.878398302679479,
+      "admitted_over_time": [
+        {
+          "iteration": 0,
+          "active_count": 11,
+          "blocks_in_use": 58
+        },
+        {
+          "iteration": 1,
+          "active_count": 11,
+          "blocks_in_use": 58
+        },
+        {
+          "iteration": 2,
+          "active_count": 11,
+          "blocks_in_use": 58
+        },
+        {
+          "iteration": 3,
+          "active_count": 11,
+          "blocks_in_use": 58
+        },
+        {
+          "iteration": 4,
+          "active_count": 11,
+          "blocks_in_use": 58
+        },
+        {
+          "iteration": 5,
+          "active_count": 11,
+          "blocks_in_use": 58
+        },
+        {
+          "iteration": 6,
+          "active_count": 11,
+          "blocks_in_use": 60
+        },
+        {
+          "iteration": 7,
+          "active_count": 11,
+          "blocks_in_use": 64
+        },
+        {
+          "iteration": 8,
+          "active_count": 9,
+          "blocks_in_use": 58
+        },
+        {
+          "iteration": 9,
+          "active_count": 9,
+          "blocks_in_use": 59
+        },
+        {
+          "iteration": 10,
+          "active_count": 9,
+          "blocks_in_use": 59
+        },
+        {
+          "iteration": 11,
+          "active_count": 9,
+          "blocks_in_use": 60
+        },
+        {
+          "iteration": 12,
+          "active_count": 9,
+          "blocks_in_use": 60
+        },
+        {
+          "iteration": 13,
+          "active_count": 9,
+          "blocks_in_use": 60
+        },
+        {
+          "iteration": 14,
+          "active_count": 9,
+          "blocks_in_use": 61
+        },
+        {
+          "iteration": 15,
+          "active_count": 9,
+          "blocks_in_use": 61
+        },
+        {
+          "iteration": 16,
+          "active_count": 9,
+          "blocks_in_use": 61
+        },
+        {
+          "iteration": 17,
+          "active_count": 9,
+          "blocks_in_use": 61
+        },
+        {
+          "iteration": 18,
+          "active_count": 7,
+          "blocks_in_use": 53
+        },
+        {
+          "iteration": 19,
+          "active_count": 7,
+          "blocks_in_use": 53
+        },
+        {
+          "iteration": 20,
+          "active_count": 7,
+          "blocks_in_use": 53
+        },
+        {
+          "iteration": 21,
+          "active_count": 7,
+          "blocks_in_use": 53
+        },
+        {
+          "iteration": 22,
+          "active_count": 7,
+          "blocks_in_use": 53
+        },
+        {
+          "iteration": 23,
+          "active_count": 7,
+          "blocks_in_use": 54
+        },
+        {
+          "iteration": 24,
+          "active_count": 7,
+          "blocks_in_use": 57
+        },
+        {
+          "iteration": 25,
+          "active_count": 7,
+          "blocks_in_use": 58
+        },
+        {
+          "iteration": 26,
+          "active_count": 6,
+          "blocks_in_use": 54
+        },
+        {
+          "iteration": 27,
+          "active_count": 6,
+          "blocks_in_use": 55
+        },
+        {
+          "iteration": 28,
+          "active_count": 6,
+          "blocks_in_use": 58
+        },
+        {
+          "iteration": 29,
+          "active_count": 6,
+          "blocks_in_use": 58
+        },
+        {
+          "iteration": 30,
+          "active_count": 6,
+          "blocks_in_use": 58
+        },
+        {
+          "iteration": 31,
+          "active_count": 6,
+          "blocks_in_use": 58
+        },
+        {
+          "iteration": 32,
+          "active_count": 6,
+          "blocks_in_use": 58
+        },
+        {
+          "iteration": 33,
+          "active_count": 6,
+          "blocks_in_use": 58
+        },
+        {
+          "iteration": 34,
+          "active_count": 6,
+          "blocks_in_use": 58
+        },
+        {
+          "iteration": 35,
+          "active_count": 6,
+          "blocks_in_use": 59
+        },
+        {
+          "iteration": 36,
+          "active_count": 5,
+          "blocks_in_use": 56
+        },
+        {
+          "iteration": 37,
+          "active_count": 5,
+          "blocks_in_use": 56
+        },
+        {
+          "iteration": 38,
+          "active_count": 5,
+          "blocks_in_use": 56
+        },
+        {
+          "iteration": 39,
+          "active_count": 5,
+          "blocks_in_use": 58
+        },
+        {
+          "iteration": 40,
+          "active_count": 5,
+          "blocks_in_use": 58
+        },
+        {
+          "iteration": 41,
+          "active_count": 5,
+          "blocks_in_use": 59
+        },
+        {
+          "iteration": 42,
+          "active_count": 5,
+          "blocks_in_use": 59
+        },
+        {
+          "iteration": 43,
+          "active_count": 5,
+          "blocks_in_use": 60
+        },
+        {
+          "iteration": 44,
+          "active_count": 5,
+          "blocks_in_use": 60
+        },
+        {
+          "iteration": 45,
+          "active_count": 5,
+          "blocks_in_use": 60
+        },
+        {
+          "iteration": 46,
+          "active_count": 5,
+          "blocks_in_use": 60
+        },
+        {
+          "iteration": 47,
+          "active_count": 5,
+          "blocks_in_use": 60
+        },
+        {
+          "iteration": 48,
+          "active_count": 5,
+          "blocks_in_use": 60
+        },
+        {
+          "iteration": 49,
+          "active_count": 5,
+          "blocks_in_use": 60
+        },
+        {
+          "iteration": 50,
+          "active_count": 5,
+          "blocks_in_use": 60
+        },
+        {
+          "iteration": 51,
+          "active_count": 5,
+          "blocks_in_use": 60
+        },
+        {
+          "iteration": 52,
+          "active_count": 5,
+          "blocks_in_use": 61
+        },
+        {
+          "iteration": 53,
+          "active_count": 5,
+          "blocks_in_use": 61
+        },
+        {
+          "iteration": 54,
+          "active_count": 5,
+          "blocks_in_use": 61
+        },
+        {
+          "iteration": 55,
+          "active_count": 5,
+          "blocks_in_use": 63
+        },
+        {
+          "iteration": 56,
+          "active_count": 4,
+          "blocks_in_use": 58
+        },
+        {
+          "iteration": 57,
+          "active_count": 4,
+          "blocks_in_use": 59
+        },
+        {
+          "iteration": 58,
+          "active_count": 4,
+          "blocks_in_use": 59
+        },
+        {
+          "iteration": 59,
+          "active_count": 4,
+          "blocks_in_use": 60
+        },
+        {
+          "iteration": 60,
+          "active_count": 10,
+          "blocks_in_use": 57
+        },
+        {
+          "iteration": 61,
+          "active_count": 10,
+          "blocks_in_use": 57
+        },
+        {
+          "iteration": 62,
+          "active_count": 10,
+          "blocks_in_use": 57
+        },
+        {
+          "iteration": 63,
+          "active_count": 10,
+          "blocks_in_use": 57
+        },
+        {
+          "iteration": 64,
+          "active_count": 10,
+          "blocks_in_use": 57
+        },
+        {
+          "iteration": 65,
+          "active_count": 10,
+          "blocks_in_use": 57
+        },
+        {
+          "iteration": 66,
+          "active_count": 10,
+          "blocks_in_use": 60
+        },
+        {
+          "iteration": 67,
+          "active_count": 10,
+          "blocks_in_use": 63
+        },
+        {
+          "iteration": 68,
+          "active_count": 8,
+          "blocks_in_use": 57
+        },
+        {
+          "iteration": 69,
+          "active_count": 8,
+          "blocks_in_use": 58
+        },
+        {
+          "iteration": 70,
+          "active_count": 8,
+          "blocks_in_use": 58
+        },
+        {
+          "iteration": 71,
+          "active_count": 8,
+          "blocks_in_use": 59
+        },
+        {
+          "iteration": 72,
+          "active_count": 8,
+          "blocks_in_use": 59
+        },
+        {
+          "iteration": 73,
+          "active_count": 8,
+          "blocks_in_use": 59
+        },
+        {
+          "iteration": 74,
+          "active_count": 8,
+          "blocks_in_use": 59
+        },
+        {
+          "iteration": 75,
+          "active_count": 8,
+          "blocks_in_use": 59
+        },
+        {
+          "iteration": 76,
+          "active_count": 8,
+          "blocks_in_use": 59
+        },
+        {
+          "iteration": 77,
+          "active_count": 8,
+          "blocks_in_use": 59
+        },
+        {
+          "iteration": 78,
+          "active_count": 5,
+          "blocks_in_use": 47
+        },
+        {
+          "iteration": 79,
+          "active_count": 5,
+          "blocks_in_use": 47
+        },
+        {
+          "iteration": 80,
+          "active_count": 5,
+          "blocks_in_use": 47
+        },
+        {
+          "iteration": 81,
+          "active_count": 5,
+          "blocks_in_use": 47
+        },
+        {
+          "iteration": 82,
+          "active_count": 5,
+          "blocks_in_use": 47
+        },
+        {
+          "iteration": 83,
+          "active_count": 5,
+          "blocks_in_use": 48
+        },
+        {
+          "iteration": 84,
+          "active_count": 5,
+          "blocks_in_use": 50
+        },
+        {
+          "iteration": 85,
+          "active_count": 5,
+          "blocks_in_use": 51
+        },
+        {
+          "iteration": 86,
+          "active_count": 5,
+          "blocks_in_use": 51
+        },
+        {
+          "iteration": 87,
+          "active_count": 5,
+          "blocks_in_use": 52
+        },
+        {
+          "iteration": 88,
+          "active_count": 2,
+          "blocks_in_use": 26
+        },
+        {
+          "iteration": 89,
+          "active_count": 2,
+          "blocks_in_use": 26
+        },
+        {
+          "iteration": 90,
+          "active_count": 2,
+          "blocks_in_use": 26
+        },
+        {
+          "iteration": 91,
+          "active_count": 2,
+          "blocks_in_use": 26
+        },
+        {
+          "iteration": 92,
+          "active_count": 2,
+          "blocks_in_use": 26
+        },
+        {
+          "iteration": 93,
+          "active_count": 2,
+          "blocks_in_use": 26
+        },
+        {
+          "iteration": 94,
+          "active_count": 2,
+          "blocks_in_use": 26
+        },
+        {
+          "iteration": 95,
+          "active_count": 2,
+          "blocks_in_use": 26
+        },
+        {
+          "iteration": 96,
+          "active_count": 2,
+          "blocks_in_use": 26
+        },
+        {
+          "iteration": 97,
+          "active_count": 2,
+          "blocks_in_use": 26
+        },
+        {
+          "iteration": 98,
+          "active_count": 2,
+          "blocks_in_use": 26
+        },
+        {
+          "iteration": 99,
+          "active_count": 2,
+          "blocks_in_use": 27
+        },
+        {
+          "iteration": 100,
+          "active_count": 2,
+          "blocks_in_use": 27
+        },
+        {
+          "iteration": 101,
+          "active_count": 2,
+          "blocks_in_use": 28
+        },
+        {
+          "iteration": 102,
+          "active_count": 2,
+          "blocks_in_use": 28
+        },
+        {
+          "iteration": 103,
+          "active_count": 2,
+          "blocks_in_use": 28
+        },
+        {
+          "iteration": 104,
+          "active_count": 2,
+          "blocks_in_use": 28
+        },
+        {
+          "iteration": 105,
+          "active_count": 2,
+          "blocks_in_use": 28
+        },
+        {
+          "iteration": 106,
+          "active_count": 2,
+          "blocks_in_use": 28
+        },
+        {
+          "iteration": 107,
+          "active_count": 2,
+          "blocks_in_use": 28
+        },
+        {
+          "iteration": 108,
+          "active_count": 2,
+          "blocks_in_use": 28
+        },
+        {
+          "iteration": 109,
+          "active_count": 2,
+          "blocks_in_use": 28
+        },
+        {
+          "iteration": 110,
+          "active_count": 2,
+          "blocks_in_use": 28
+        },
+        {
+          "iteration": 111,
+          "active_count": 2,
+          "blocks_in_use": 28
+        },
+        {
+          "iteration": 112,
+          "active_count": 2,
+          "blocks_in_use": 28
+        },
+        {
+          "iteration": 113,
+          "active_count": 2,
+          "blocks_in_use": 28
+        },
+        {
+          "iteration": 114,
+          "active_count": 2,
+          "blocks_in_use": 28
+        },
+        {
+          "iteration": 115,
+          "active_count": 2,
+          "blocks_in_use": 29
+        },
+        {
+          "iteration": 116,
+          "active_count": 2,
+          "blocks_in_use": 29
+        },
+        {
+          "iteration": 117,
+          "active_count": 2,
+          "blocks_in_use": 30
+        },
+        {
+          "iteration": 118,
+          "active_count": 2,
+          "blocks_in_use": 30
+        },
+        {
+          "iteration": 119,
+          "active_count": 2,
+          "blocks_in_use": 30
+        }
+      ],
+      "results": [
+        {
+          "request_id": 1,
+          "category": "short",
+          "prompt_tokens": 42,
+          "output_tokens": 8,
+          "actual_len_tokens": 50,
+          "blocks_held_at_finish": 4,
+          "capacity_tokens": 64,
+          "internal_fragmentation_tokens": 14,
+          "latency_s": 15.380417600012152,
+          "text": "The capital of France is Paris."
+        },
+        {
+          "request_id": 5,
+          "category": "short",
+          "prompt_tokens": 42,
+          "output_tokens": 8,
+          "actual_len_tokens": 50,
+          "blocks_held_at_finish": 4,
+          "capacity_tokens": 64,
+          "internal_fragmentation_tokens": 14,
+          "latency_s": 15.380457099992782,
+          "text": "The capital of France is Paris."
+        },
+        {
+          "request_id": 9,
+          "category": "short",
+          "prompt_tokens": 42,
+          "output_tokens": 8,
+          "actual_len_tokens": 50,
+          "blocks_held_at_finish": 4,
+          "capacity_tokens": 64,
+          "internal_fragmentation_tokens": 14,
+          "latency_s": 15.38048739999067,
+          "text": "The capital of France is Paris."
+        },
+        {
+          "request_id": 3,
+          "category": "short",
+          "prompt_tokens": 43,
+          "output_tokens": 18,
+          "actual_len_tokens": 61,
+          "blocks_held_at_finish": 4,
+          "capacity_tokens": 64,
+          "internal_fragmentation_tokens": 3,
+          "latency_s": 22.001263400015887,
+          "text": "When you mix blue and yellow, you get a bright, vibrant shade of orange."
+        },
+        {
+          "request_id": 7,
+          "category": "short",
+          "prompt_tokens": 43,
+          "output_tokens": 18,
+          "actual_len_tokens": 61,
+          "blocks_held_at_finish": 4,
+          "capacity_tokens": 64,
+          "internal_fragmentation_tokens": 3,
+          "latency_s": 22.001306299993303,
+          "text": "When you mix blue and yellow, you get a bright, vibrant shade of orange."
+        },
+        {
+          "request_id": 11,
+          "category": "short",
+          "prompt_tokens": 43,
+          "output_tokens": 18,
+          "actual_len_tokens": 61,
+          "blocks_held_at_finish": 4,
+          "capacity_tokens": 64,
+          "internal_fragmentation_tokens": 3,
+          "latency_s": 26.499595700006466,
+          "text": "When you mix blue and yellow, you get a bright, vibrant shade of orange."
+        },
+        {
+          "request_id": 2,
+          "category": "short",
+          "prompt_tokens": 41,
+          "output_tokens": 28,
+          "actual_len_tokens": 69,
+          "blocks_held_at_finish": 5,
+          "capacity_tokens": 80,
+          "internal_fragmentation_tokens": 11,
+          "latency_s": 27.491801600001054,
+          "text": "Yes, the sun is a star, as it is a massive, luminous object that emits light and heat through nuclear fusion reactions."
+        },
+        {
+          "request_id": 6,
+          "category": "short",
+          "prompt_tokens": 41,
+          "output_tokens": 28,
+          "actual_len_tokens": 69,
+          "blocks_held_at_finish": 5,
+          "capacity_tokens": 80,
+          "internal_fragmentation_tokens": 11,
+          "latency_s": 27.49184060000698,
+          "text": "Yes, the sun is a star, as it is a massive, luminous object that emits light and heat through nuclear fusion reactions."
+        },
+        {
+          "request_id": 10,
+          "category": "short",
+          "prompt_tokens": 41,
+          "output_tokens": 28,
+          "actual_len_tokens": 69,
+          "blocks_held_at_finish": 5,
+          "capacity_tokens": 80,
+          "internal_fragmentation_tokens": 11,
+          "latency_s": 27.491873099992517,
+          "text": "Yes, the sun is a star, as it is a massive, luminous object that emits light and heat through nuclear fusion reactions."
+        },
+        {
+          "request_id": 13,
+          "category": "short",
+          "prompt_tokens": 42,
+          "output_tokens": 8,
+          "actual_len_tokens": 50,
+          "blocks_held_at_finish": 4,
+          "capacity_tokens": 64,
+          "internal_fragmentation_tokens": 14,
+          "latency_s": 34.534075100003975,
+          "text": "The capital of France is Paris."
+        },
+        {
+          "request_id": 14,
+          "category": "short",
+          "prompt_tokens": 41,
+          "output_tokens": 28,
+          "actual_len_tokens": 69,
+          "blocks_held_at_finish": 5,
+          "capacity_tokens": 80,
+          "internal_fragmentation_tokens": 11,
+          "latency_s": 44.194579100003466,
+          "text": "Yes, the sun is a star, as it is a massive, luminous object that emits light and heat through nuclear fusion reactions."
+        },
+        {
+          "request_id": 0,
+          "category": "long",
+          "prompt_tokens": 182,
+          "output_tokens": 60,
+          "actual_len_tokens": 242,
+          "blocks_held_at_finish": 16,
+          "capacity_tokens": 256,
+          "internal_fragmentation_tokens": 14,
+          "latency_s": 45.84226939998916,
+          "text": "Photosynthesis is the process by which plants, algae, and some bacteria convert light energy into chemical energy stored in glucose. This process is crucial for almost all life on Earth, as it provides the energy necessary for almost all cellular activities, including the growth and reproduction of organisms. The process can be divided"
+        },
+        {
+          "request_id": 4,
+          "category": "long",
+          "prompt_tokens": 168,
+          "output_tokens": 60,
+          "actual_len_tokens": 228,
+          "blocks_held_at_finish": 15,
+          "capacity_tokens": 240,
+          "internal_fragmentation_tokens": 12,
+          "latency_s": 45.842346499994164,
+          "text": "The water cycle, also known as the hydrological cycle, is a continuous process that involves the movement of water on, above, and below the surface of the Earth. It is a crucial part of the Earth's climate system and plays a vital role in regulating the Earth's temperature and the availability of"
+        },
+        {
+          "request_id": 8,
+          "category": "long",
+          "prompt_tokens": 170,
+          "output_tokens": 60,
+          "actual_len_tokens": 230,
+          "blocks_held_at_finish": 15,
+          "capacity_tokens": 240,
+          "internal_fragmentation_tokens": 10,
+          "latency_s": 45.842426699993666,
+          "text": "### Understanding Vaccines: How They Train the Immune System\n\nVaccines are designed to stimulate the immune system to recognize and fight off specific pathogens. The process begins with the introduction of a harmless or attenuated pathogen into the body, which triggers an immune response. This response is crucial because"
+        },
+        {
+          "request_id": 17,
+          "category": "short",
+          "prompt_tokens": 42,
+          "output_tokens": 8,
+          "actual_len_tokens": 50,
+          "blocks_held_at_finish": 4,
+          "capacity_tokens": 64,
+          "internal_fragmentation_tokens": 14,
+          "latency_s": 59.1062932999921,
+          "text": "The capital of France is Paris."
+        },
+        {
+          "request_id": 21,
+          "category": "short",
+          "prompt_tokens": 42,
+          "output_tokens": 8,
+          "actual_len_tokens": 50,
+          "blocks_held_at_finish": 4,
+          "capacity_tokens": 64,
+          "internal_fragmentation_tokens": 14,
+          "latency_s": 59.10631730000023,
+          "text": "The capital of France is Paris."
+        },
+        {
+          "request_id": 15,
+          "category": "short",
+          "prompt_tokens": 43,
+          "output_tokens": 18,
+          "actual_len_tokens": 61,
+          "blocks_held_at_finish": 4,
+          "capacity_tokens": 64,
+          "internal_fragmentation_tokens": 3,
+          "latency_s": 66.54993619999732,
+          "text": "When you mix blue and yellow, you get a bright, vibrant shade of orange."
+        },
+        {
+          "request_id": 19,
+          "category": "short",
+          "prompt_tokens": 43,
+          "output_tokens": 18,
+          "actual_len_tokens": 61,
+          "blocks_held_at_finish": 4,
+          "capacity_tokens": 64,
+          "internal_fragmentation_tokens": 3,
+          "latency_s": 66.54997719998937,
+          "text": "When you mix blue and yellow, you get a bright, vibrant shade of orange."
+        },
+        {
+          "request_id": 23,
+          "category": "short",
+          "prompt_tokens": 43,
+          "output_tokens": 18,
+          "actual_len_tokens": 61,
+          "blocks_held_at_finish": 4,
+          "capacity_tokens": 64,
+          "internal_fragmentation_tokens": 3,
+          "latency_s": 66.5500100000063,
+          "text": "When you mix blue and yellow, you get a bright, vibrant shade of orange."
+        },
+        {
+          "request_id": 12,
+          "category": "long",
+          "prompt_tokens": 182,
+          "output_tokens": 60,
+          "actual_len_tokens": 242,
+          "blocks_held_at_finish": 16,
+          "capacity_tokens": 256,
+          "internal_fragmentation_tokens": 14,
+          "latency_s": 71.4109970999998,
+          "text": "Photosynthesis is the process by which plants, algae, and some bacteria convert light energy into chemical energy stored in glucose. This process is crucial for almost all life on Earth, as it provides the energy necessary for almost all cellular activities, including the growth and reproduction of organisms. The process can be divided"
+        },
+        {
+          "request_id": 18,
+          "category": "short",
+          "prompt_tokens": 41,
+          "output_tokens": 28,
+          "actual_len_tokens": 69,
+          "blocks_held_at_finish": 5,
+          "capacity_tokens": 80,
+          "internal_fragmentation_tokens": 11,
+          "latency_s": 71.41107160001411,
+          "text": "Yes, the sun is a star, as it is a massive, luminous object that emits light and heat through nuclear fusion reactions."
+        },
+        {
+          "request_id": 22,
+          "category": "short",
+          "prompt_tokens": 41,
+          "output_tokens": 28,
+          "actual_len_tokens": 69,
+          "blocks_held_at_finish": 5,
+          "capacity_tokens": 80,
+          "internal_fragmentation_tokens": 11,
+          "latency_s": 71.41111859999364,
+          "text": "Yes, the sun is a star, as it is a massive, luminous object that emits light and heat through nuclear fusion reactions."
+        },
+        {
+          "request_id": 16,
+          "category": "long",
+          "prompt_tokens": 168,
+          "output_tokens": 60,
+          "actual_len_tokens": 228,
+          "blocks_held_at_finish": 15,
+          "capacity_tokens": 240,
+          "internal_fragmentation_tokens": 12,
+          "latency_s": 77.04078310000477,
+          "text": "The water cycle, also known as the hydrological cycle, is a continuous process that involves the movement of water on, above, and below the surface of the Earth. It is a crucial part of the Earth's climate system and plays a vital role in regulating the Earth's temperature and the availability of"
+        },
+        {
+          "request_id": 20,
+          "category": "long",
+          "prompt_tokens": 170,
+          "output_tokens": 60,
+          "actual_len_tokens": 230,
+          "blocks_held_at_finish": 15,
+          "capacity_tokens": 240,
+          "internal_fragmentation_tokens": 10,
+          "latency_s": 77.04092030000174,
+          "text": "### Understanding Vaccines: How They Train the Immune System\n\nVaccines are designed to stimulate the immune system to recognize and fight off specific pathogens. The process begins with the introduction of a harmless or attenuated pathogen into the body, which triggers an immune response. This response is crucial because"
+        }
+      ]
+    },
+    "vllm_paged": {
+      "skipped": true,
+      "reason": "vLLM is not importable in this environment (No module named 'vllm'). Running on Windows 10. Same limitation established in modules 01 and 02: vLLM ships no Windows wheels and this machine has no usable Linux/WSL2 distro."
+    }
+  }
+}
